@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Undergraduate</title>
+		<link href="../img/SCM_logo.png" rel="icon" type="image/x-icon" 
+        <meta name="description" content="">
+		<!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- <link rel="shortcut icon" href="img/favicon.png"> -->
+        
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet'>
+        
+        <!-- Syntax Highlighter -->
+        <link rel="stylesheet" type="text/css" href="../syntax-highlighter/styles/shCore.css" media="all">
+        <link rel="stylesheet" type="text/css" href="../syntax-highlighter/styles/shThemeDefault.css" media="all">
+		
+		<!-- Font Awesome CSS-->
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <!-- Normalize/Reset CSS-->
+		<link rel="stylesheet" href="../css/normalize.min.css">
+		<!-- Main CSS-->
+        <link rel="stylesheet" href="../css/main.css">
+		
+    </head>
+	
+    <body id="welcome">
+    
+        <aside class="left-sidebar">
+            <div class="logo">
+                <a href="#welcome">
+                    <img src="../img/SCM_logo.png" alt="">
+                </a>
+            </div>
+            <nav class="left-nav">
+                <ul id="nav">
+                    <li class="current"><a href="#welcome">Welcome</a></li>
+					<li><a href="#algorithm-heap-sort">Algorithm | Heap Sort</a></li>
+					<li><a href="#special-linked-list-lists">Lists | Special Linked Lists</a></li>
+					<li><a class="indent" href="#lists-list-interface">List Interface</a></li>
+					<li><a class="indent" href="#lists-double-linked-list">Double Linked List</a></li>
+					<li><a class="indent" href="#lists-circular-linked-list">Circular Linked List</a></li>
+					<li><a class="indent" href="#lists-circular-double-linked-list">Circular Double Linked List</a></li>
+					<li><a href="#recursive-methods">Recursion | Method Formation</a></li>
+                </ul>
+            </nav>
+        </aside>
+		
+		<div id="main-wrapper">
+		    <div class="main-content">
+		        <section id="welcome">
+		            <div class="content-header">
+		                <h1 class="big-title">Undergraduate Projects</h1>
+						</br>
+						<u><a target="_blank" href="university-undergraduate-contents.pdf"><h3>Click to View Table of Contents</h3></a></u>
+						</br>
+						<a class="" href="projects-1"><i class="fa fa-arrow-left"></i></a>
+						<u><a class="not-page" href="projects-1">1</a></u>
+						<u><a class="" href="#">2</a></u>
+						<a class="dead-arrow" href="#"><i class="fa fa-arrow-right"></i></a>
+		            </div>
+		            <div class="welcome">
+                        
+                        <h2 class="twenty">Assignments and Projects from My Undergraduate</h2>
+						
+						<p>Assignments and projects I felt were worth documenting/saving for the future. These aren't necessarily large or particularly important, but they show useful techniques or functions.</p>
+
+                        <p>Some sections show whole programs or files, while other show only functions/methods that can be used in any program.</p>
+						
+						<p>I mark what programming language I use in each project as well.</p>
+		            </div>
+		            
+		            <div class="features">
+		                <h2 class="twenty">This Page Features</h2>
+		                
+		                <ul>
+<<<<<<< HEAD
+                            <li>Heap Sort Algorithm</li>
+							<li>Double Linked Lists</li>
+							<li>Circular Linked Lists</li>
+							<li>Circular Double Linked Lists</li>
+							<li>Basic Recursion</li>
+=======
+                            		<li>Heap Sort Algorithm</li>
+					<li>Double Linked Lists</li>
+					<li>Circular Linked Lists</li>
+					<li>Circular Double Linked Lists</li>
+					<li>Basic Recursion</li>
+>>>>>>> d845803186bda014450b256beb30fb64abe9fedb
+		                </ul>
+		            </div>
+
+		        </section>	        
+				
+				<section id="algorithm-heap-sort">
+					<div class="content-header">
+		                <h1>Heap Sort | Algorithm</h1>
+						</br>
+						<h3>Programming Language : Java</h3>
+                    </div>
+					<div class="welcome">                      
+                        <h2 class="twenty">Sort an Array Using the Heap Sort Algorithm</h2>
+						<p>This program shows the use of a sorting algorithm called Heap Sort.</p>
+                        <p>The algorithm sorts an array of values from smallest to largest in place (sorting the array without creating additional arrays).</p>
+		            </div>
+					<div class="welcome">       
+                        <h2 class="twenty">Algorithm Documentation</h2>
+                        <p>Documentation on the algorithm: pseudocode, time complexity, loop invarient...</p>
+						<p>Download the PDF Below</p>
+		            </div>
+					<div class="script-source">
+		                <ul>
+		                    <li><a href="project-files/page2/heap-sort-algorithm/documentation.pdf" download>documentation.pdf</a></li>
+		                </ul>
+		            </div>
+					<div class="welcome">       
+                        <h2 class="twenty">Files Used / Created</h2>
+                        <p>Download them below. Bold represents starting files, unbold: other files.</p>
+						<p>Download an example of this algorithm being used.</p>
+		            </div>
+					<div class="script-source">
+		                <ul>
+		                    <li><a href="project-files/page2/heap-sort-algorithm/HeapSortAlgorithm.java" download>HeapSortAlgorithm.java</a></li>
+		                </ul>
+		            </div>
+					
+					<h2 class="title">Heap Sort</h2>
+		            <p class="fifteen">This is the overall method that sorts an array. It calls build max heap, and max heapify.</p>
+		            <script type="syntaxhighlighter" class="brush: js">
+					/**
+					 * Call this method to sort an array. 
+					 * This method calls all other methods to complete the sort.
+					 * @param A : int[] - the array to be sorted
+					 * @param n : int - the length of the array
+					 * @return A : int[] the completely sorted array
+					 */
+					public static int[] HEAP_SORT(int[] A, int n)
+					{
+						A = BUILD_MAX_HEAP(A, n);
+						for(int i = n-1; i >= 1; i--)
+						{
+							int temp = A[0];
+							A[0] = A[i];
+							A[i] = temp;
+							A = MAX_HEAPIFY(A, 0, i-1);
+						}
+						return A;
+					}
+		            </script>
+					
+					<h2 class="title">Helper Methods</h2>
+		            <p class="fifteen">These three methods are use to find specific children in the heap. Given an index they can find the parent of them, or if they are a parent, their left and right children</p>
+		            <script type="syntaxhighlighter" class="brush: js">
+					/**
+					 * Get the parent index of the child in index i
+					 * @param i : int - index to find the parent of
+					 * @return int - the index of the child's parent
+					 */
+					public static int Parent(int i)
+					{
+						return i / 2;
+					}
+					
+					/**
+					 * Get the further left most index of a parents children
+					 * @param i : int - the parent index
+					 * @return int - the further left most index (child) of that parent
+					 */
+					public static int Left(int i)
+					{
+						return i * 2 + 1;
+					}
+					
+					/**
+					 * Get the further right most index of a parents children
+					 * @param i : int - the parent index
+					 * @return int - the further right most index (child) of that parent
+					 */
+					public static int Right(int i)
+					{
+						return i * 2 + 2;
+					}
+		            </script>
+					
+					<h2 class="title">Build Max Heap</h2>
+		            <p class="fifteen">This method takes an array, and builds it into a max heap.</p>
+		            <script type="syntaxhighlighter" class="brush: js">
+					/**
+					 * Turn any normal array into a max heap.
+					 * @param A : int[] - The array to be sorted
+					 * @param n : int - The length of the array
+					 * @return A : int[] - The array to be sorted
+					 */
+					public static int[] BUILD_MAX_HEAP(int[] A, int n)
+					{
+						for(int i = n/2; i >= 0; i--)
+						{
+							MAX_HEAPIFY(A, i, n);
+						}
+						return A;
+					}
+		            </script>
+					
+					<h2 class="title">Max Heapify</h2>
+		            <p class="fifteen">This method moves elements around so that they are either in their correct parent or child position.</p>
+		            <script type="syntaxhighlighter" class="brush: js">
+					/*
+					 * Move the node (element) to its correct positon, whether it should be the parent or child
+					 * @param A : int[] - array to be sorted
+					 * @param i : int - the index of the current child
+					 * @param n : int - the length of the array
+					 * @return A : int[] - array to be sorted
+					 */
+					public static int[] MAX_HEAPIFY(int[] A, int i,int n)
+					{
+						int largest = i;
+						int l = Left(i);
+						int r = Right(i);
+						if(l < n && A[l] > A[largest])
+						{
+							largest = l;
+						}
+						if(r < n && A[r] > A[largest])
+						{
+							largest = r;
+						}
+						if(largest != i)
+						{
+							int temp = A[i];
+							A[i] = A[largest];
+							A[largest] = temp;
+							MAX_HEAPIFY(A, largest, n);
+						}
+						return A;
+					}
+		            </script>
+		        </section>
+				
+				<section id="special-linked-list-lists">
+					<div class="content-header">
+		                <h1>Double Linked & Circular & Double Linked Circular | Lists</h1>
+						</br>
+						<h3>Programming Language : Java</h3>
+                    </div>
+					<div class="welcome">                      
+                        <h2 class="twenty">Manipulating Lists | Special Linked Lists</h2>
+						<p>This program shows the use of lists, and different ways to work with them.</p>
+                        <p>The lists I demonstrate are linked lists, and are: double linked lists, circular linked lists, and circular double linked lists.</p>
+		            </div>
+					<div class="welcome">       
+                        <h2 class="twenty">Files Used / Created</h2>
+                        <p>Download them below. Bold represents starting files, unbold: other files.</p>
+						<p>Download a Driver file, that shows an example of utilization of all the of the methods in the linked lists.</p>
+		            </div>
+					<div class="script-source">
+		                <ul>
+							<b><li><a href="project-files/page2/special-linked-list-lists/ListInterface.java" download>ListInterface.java</a></li></b>
+							<b><li><a href="project-files/page2/special-linked-list-lists/DoubleLinkedList.java" download>DoubleLinkedList.java</a></li></b>
+							<b><li><a href="project-files/page2/special-linked-list-lists/CircularLinkedList.java" download>CircularLinkedList.java</a></li></b>
+							<b><li><a href="project-files/page2/special-linked-list-lists/CircularDoubleLinkedList.java" download>CircularDoubleLinkedList.java</a></li></b>
+		                    <b><li><a href="project-files/page2/special-linked-list-lists/Driver.java" download>Driver.java</a></li></b>
+		                </ul>
+		            </div>
+					<section id="lists-list-interface">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">ListInterface File</h2>
+						<p class="fifteen">This is the interface used in the three linked lists. Methods are created here, and then each list type implements them in whatever way needed.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						/**
+						 * This is the interface used in all types of linked lists in this program.
+						 * CSC 210 Data Structures
+						 * Semester 1 | Fall 2018
+						 * October 3, 2018
+						 * @author Joseph Hentges
+						 */
+						public interface ListInterface<T>
+						{
+						   /** 
+							Adds a new entry to the end of this list.
+							Entries currently in the list are unaffected.
+							The list's size is increased by 1.
+							@param newEntry  The object to be added as a new entry. */
+						   public void add(T newEntry);
+						   
+						   /** 
+							Adds a new entry at a specified position within this list.
+							Entries originally at and above the specified position
+							are at the next higher position within the list.
+							The list's size is increased by 1.
+							@param newPosition  An integer that specifies the desired position of the new entry.
+							@param newEntry     The object to be added as a new entry.
+							@throws  IndexOutOfBoundsException if either
+							newPosition < 1 or newPosition > getLength() + 1. 
+							*/
+						   public void add(int newPosition, T newEntry);
+						   
+						   /** 
+							Removes the entry at a given position from this list.
+							Entries originally at positions higher than the given
+							position are at the next lower position within the list,
+							and the list's size is decreased by 1.
+							@param givenPosition  An integer that indicates the position of the entry to be removed.
+							@return  A reference to the removed entry.
+							@throws  IndexOutOfBoundsException if either 
+							givenPosition < 1 or givenPosition > getLength(). 
+							*/
+						   public T remove(int givenPosition);
+						   
+						   /** Removes all entries from this list. */
+						   public void clear();
+						   
+						   /** 
+							Replaces the entry at a given position in this list.
+							@param givenPosition  An integer that indicates the position of the entry to be replaced.
+							@param newEntry  The object that will replace the entry at the position givenPosition.
+							@return  The original entry that was replaced.
+							@throws  IndexOutOfBoundsException if either
+							givenPosition < 1 or givenPosition > getLength(). 
+							*/
+						   public T replace(int givenPosition, T newEntry);
+						   
+						   /** 
+							Retrieves the entry at a given position in this list.
+							@param givenPosition  An integer that indicates the position of the desired entry.
+							@return  A reference to the indicated entry.
+							@throws  IndexOutOfBoundsException if either givenPosition < 1 or givenPosition > getLength(). 
+							*/
+						   public T getEntry(int givenPosition);
+						   
+						   /** 
+							Retrieves all entries that are in this list in the order in which they occur in the list.
+							@return  A newly allocated array of all the entries in the list. If the list is empty, the returned array is empty. 
+							*/
+						   public T[] toArray();
+						   
+						   /** 
+							Sees whether this list contains a given entry.
+							@param anEntry  The object that is the desired entry.
+							@return  True if the list contains anEntry, or false if not. 
+							*/
+						   public boolean contains(T anEntry);
+						   
+						   /** 
+							Gets the length of this list.
+							@return  The integer number of entries currently in the list. */
+						   public int getLength();
+							   
+						   /** 
+							Sees whether this list is empty.
+							@return  True if the list is empty, or false if not. */
+						   public boolean isEmpty();
+						   
+						   /**
+							* Get values starting from the end of the list.
+							* Will only be used in double linked lists types.
+							*/
+						   public void valuesFromEnd();
+						   
+						   /**
+							* Get values in a circle. Runs through the list multiple times over.
+							* This shows the list is connected from front to back.
+							* Only used in circular linked lists types.
+							*/
+						   public void valuesInACircle();
+						}
+						</script>
+					</section>
+					<section id="lists-double-linked-list">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">DoubleLinkedList File</h2>
+						<p class="fifteen">This is a class file for a double linked list. A double linked list is a linked list that connects to the next node, as well as the node that came before it.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						/**
+						 * A class demonstrates the use of a double linked linked list
+						 * CSC 210 Data Structures
+						 * Semester 1 | Fall 2018
+						 * October 3, 2018
+						 * @author Joseph Hentges
+						 */
+						public class DoubleLinkedList<T> implements ListInterface<T>{
+							
+							private Node firstNode;            // Reference to first node of chain
+							private int numberOfEntries;
+
+							//Create a Node class
+							private class Node<T>
+							{
+								T data;
+								Node next;
+								Node last;
+							}
+							
+							//Constructor for the linked list
+							public DoubleLinkedList()
+							{
+								numberOfEntries = 0;
+								firstNode = null;
+							}
+							
+							/**
+							 * Return a string of all the values in the List
+							 */
+							@Override
+							public String toString()
+							{        
+								String output = "Data in the List (" + getLength() + "):\n";
+								Node curr = firstNode; //pointer for the nodes
+								int i = 1;
+								while(curr != null)
+								{
+									output += "\t" + (i) + ":\t" + curr.data + "\n";
+									i++;
+									curr = curr.next;
+								}
+								return output;
+							}
+
+							/**
+							 * Add item to the end of the list
+							 * @param newEntry : T - item to be added
+							 */
+							@Override
+							public void add(T newEntry) {
+								//If the list is not empty
+								//Need to find the end of the list
+								Node newNode = new Node();
+								newNode.data = newEntry;
+								Node curr = firstNode;
+								newNode.next = null;
+								if(firstNode == null)
+								{
+									newNode.last = null;
+									firstNode = newNode;
+									numberOfEntries++;
+									return;
+								}
+								while(curr.next != null)
+								{
+									curr = curr.next;
+								}
+								if(numberOfEntries == 1)
+								{
+									newNode.last = firstNode;
+								}
+								else
+								{
+									newNode.last = curr;
+								}
+								curr.next = newNode;
+								numberOfEntries++;
+							}
+
+							/**
+							 * Add an item to a particular position
+							 * @param newPosition : int - position for item to be added to | 1 as the front index
+							 * Any index lower than 0 will put the item at the front of the list
+							 * Any index greater than the current largest index will put the item at the end of the list
+							 * @param newEntry : T - item to be added
+							 */
+							@Override
+							public void add(int newPosition, T newEntry) {
+								//add to the end of the list
+								if(newPosition > numberOfEntries)
+								{
+									add(newEntry);
+								}
+								//add to the middle or front of the list
+								//if the position is less than or equal to 1, put it at the beggining of the list
+								else if(newPosition <= 1)
+								{
+									//Add to the front
+									Node newNode = new Node();
+									newNode.data = newEntry;
+									newNode.next = firstNode;
+									newNode.last = null;
+									firstNode.last = newNode;
+									firstNode = newNode;
+									numberOfEntries++;
+								}
+								//if the position is in the middle of the list
+								else
+								{
+									//Get to the location
+									Node curr = firstNode;
+									for(int i = 1; i < newPosition-1; i++)
+									{
+										curr = curr.next;
+									}
+									//Curr is before hte new node position
+									Node newNode = new Node();
+									newNode.data = newEntry;
+									newNode.next = curr.next;
+									curr.next = newNode;
+									newNode.last = curr;
+									if(curr.next.next != null)
+									{
+										curr.next.next.last = newNode;
+									}      
+									numberOfEntries++;
+								}
+							}
+
+							/** 
+							Removes the entry at a given position from this list.
+							Entries originally at positions higher than the given
+							position are at the next lower position within the list,
+							and the list's size is decreased by 1.
+							@param givenPosition  An integer that indicates the position of the entry to be removed.
+							@return  A reference to the removed entry.
+							@throws  IndexOutOfBoundsException if either 
+							givenPosition < 1 or givenPosition > getLength(). 
+							*/
+							@Override
+							public T remove(int givenPosition) {
+								//If the list is empty, just throw out a default value or exception
+								if(numberOfEntries <= 0)
+								{
+									return null; //default value in this case
+								}
+								//get at the end of the list
+								else if(givenPosition >= numberOfEntries)
+								{
+									givenPosition = numberOfEntries;
+								}
+								//get at the middle or front of the list
+								//if the position is less than or equal to 1, put it at the beggining of the list
+								else if(givenPosition <= 1)
+								{
+									//point to the front of the list
+									givenPosition = 1;
+								}
+								//Special case. If the position is the front node. Remove & return the front value
+								if(givenPosition == 1)
+								{
+									Object temp = firstNode.data;
+									firstNode = firstNode.next;
+									firstNode.last = null;
+									numberOfEntries--;
+									return (T)temp;
+								}
+								//If the position is not the front node
+								//Get to the location. Go to 1 postion BEFORE target position
+								
+								Node curr = firstNode;
+								for(int i = 1; i < givenPosition - 1; i++)
+								{
+									curr = curr.next;
+								}
+								//curr is at the node before target position
+								Object temp = curr.next.data;
+								curr.next.next.last = curr;
+								curr.next = curr.next.next;
+								numberOfEntries--;
+								return (T)temp;
+							}
+
+							/**
+							 * Clears the list of all values
+							 */
+							@Override
+							public void clear() {
+								numberOfEntries = 0;
+								firstNode = null; //By setting front to null, nothing is pointing to the front of the list, therefore java will clear everything in memory.
+							}
+
+							/** 
+							Replaces the entry at a given position in this list.
+							@param givenPosition  An integer that indicates the position of the entry to be replaced.
+							@param newEntry  The object that will replace the entry at the position givenPosition.
+							@return  The original entry that was replaced.
+							@throws  IndexOutOfBoundsException if either
+							givenPosition < 1 or givenPosition > getLength(). 
+							*/
+							@Override
+							public T replace(int givenPosition, T newEntry) {
+								//If the given position is less than or equal to 1, replace the first node
+								if(givenPosition <= 1)
+								{
+									Object temp = firstNode.data;
+									firstNode.data = newEntry;
+									return (T)temp;
+								}
+								//if the given position is too large, set it to go to the last node
+								if(givenPosition > numberOfEntries)
+								{
+									givenPosition = numberOfEntries;
+								}
+								//loop through the list, to get to the right position
+								Node curr = firstNode;
+								for(int i = 1; i < givenPosition; i++)
+								{
+									curr = curr.next;
+								}
+								Object temp = curr.data;
+								curr.data = newEntry;
+								return (T)temp;
+							}
+
+							/**
+							 * Get data at a given position
+							 * @param givenPosition : int - the poisiton number to be retrieved from
+							 * @return T - The data at the given position
+							 */
+							@Override
+							public T getEntry(int givenPosition) {
+								//If the list is empty, just throw out a default value or exception
+								if(numberOfEntries <= 0)
+								{
+									return null; //default value in this case
+								}
+								//get at the end of the list
+								else if(givenPosition >= numberOfEntries)
+								{
+									givenPosition = numberOfEntries;
+								}
+								//get at the middle or front of the list
+								//if the position is less than or equal to 1, put it at the beggining of the list
+								else if(givenPosition <= 1)
+								{
+									//point to the front of the list
+									givenPosition = 1;
+								}
+								//Everything is in order. Now find the value
+								//Have a valid position
+								//Get to the location
+								Node curr = firstNode;
+								for(int i = 1; i < givenPosition; i++)
+								{
+									curr = curr.next;
+								}
+								//Curr is at the target position
+								return (T)curr.data;
+							}
+
+							/**
+							 * Returns an array of all the items in the list
+							 * Preserves the order!
+							 * @return array : int[] - An array of the items in the list
+							 */
+							@Override
+							public T[] toArray() {
+								T[] output = (T[]) new Object[numberOfEntries]; //array to be returned. Will contain the data in each node
+								Node curr = firstNode;
+								for(int i = 0; i < numberOfEntries; i++)
+								{
+									output[i] = (T) curr.data;
+									curr = curr.next;
+								}
+								return output;
+							}
+
+							/**
+							 * Checks if a given target is in the list
+							 * @param anEntry : int - target to be found
+							 * @return bool : boolean - true if target is in the list, false otherwise
+							 */
+							@Override
+							public boolean contains(T anEntry) {
+								Node curr = firstNode;
+								while(curr != null)
+								{
+									if(curr.data == anEntry)
+									{
+										return true;
+									}
+									curr = curr.next;
+								}
+								return false;
+							}
+
+							/**
+							 * Get the length of the list, and return it.
+							 */
+							@Override
+							public int getLength() {
+								return numberOfEntries;
+							}
+
+							/**
+							 * Returns whether the list is empty or not
+							 * @return bool : boolean - True if the list is empty, false otherwise
+							 */
+							@Override
+							public boolean isEmpty() {
+								return numberOfEntries <= 0;
+							}
+							
+							/**
+							 * Go to the last node/element in the list, and read there data backwards.
+							 * This shows the list is double linked.
+							 */
+							@Override
+							public void valuesFromEnd()
+							{
+								System.out.println("The number of elements: " + numberOfEntries);
+								Node curr = firstNode;
+								while(curr.next != null)
+								{
+									curr = curr.next;
+								}
+								System.out.println("The list is currently on the last item. Item data: " + curr.data);
+								System.out.println("Going backwards in the list now...");
+								for(int i = 0; i < numberOfEntries; i++)
+								{
+									System.out.println("Current item data: " + curr.data);
+									curr = curr.last;
+								}
+							}
+							
+							/**
+							 * This method is not used in this List Type.
+							 * Only Used in circle linked lists.
+							 */
+							@Override
+							public void valuesInACircle()
+							{
+								throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+							}
+						}
+						</script>
+					</section>
+					<section id="lists-circular-linked-list">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">CircularLinkedList File</h2>
+						<p class="fifteen">This is a class file for a circular linked list. A circular linked list is a linked list that is connected front and back.</br>The first node in the list's 'last' pointer points to the last element in the list, and the last node in the list's 'next' pointer points to the first element in the list.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						/**
+						 * A class demonstrates the use of a circular linked linked list
+						 * CSC 210 Data Structures
+						 * Semester 1 | Fall 2018
+						 * October 3, 2018
+						 * @author Joseph Hentges
+						 */
+						public class CircularLinkedList<T> implements ListInterface<T> {
+							
+							private Node firstNode; // Reference to first node of chain
+							private int numberOfEntries;
+
+							//Create a Node class
+							private class Node<T>
+							{
+								T data;
+								Node next;
+							}
+							
+							//Constructor for the linked list
+							public CircularLinkedList()
+							{
+								numberOfEntries = 0;
+								firstNode = null;
+							}
+							
+							/**
+							 * Return a string of all the values in the List
+							 */
+							@Override
+							public String toString()
+							{        
+								String output = "Data in the List (" + getLength() + "):\n";
+								Node curr = firstNode; //pointer for the nodes
+								for(int i = 1; i <= numberOfEntries; i++)
+								{
+									output += "\t" + (i) + ":\t" + curr.data + "\n";
+									curr = curr.next;
+								}
+								return output;
+							}
+
+							/**
+							 * Add item to the end of the list
+							 * @param newEntry : T - item to be added
+							 */
+							@Override
+							public void add(T newEntry) {
+								//Find the end of the list
+								//Do we have a list?
+								if(firstNode == null)
+								{
+									Node newNode = new Node();
+									newNode.data = newEntry;
+									firstNode = newNode;
+									newNode.next = firstNode;
+									numberOfEntries++;
+									return;
+								}
+								//If the list is not empty
+								//Need to find the end of the list
+								Node curr = firstNode;
+								for(int count = 1; count < numberOfEntries; count++)
+								{
+									curr = curr.next;
+								}
+								Node newNode = new Node();
+								newNode.data = newEntry;
+								newNode.next = firstNode;
+								curr.next = newNode;
+								numberOfEntries++;
+							}
+
+							/**
+							 * Add an item to a particular position
+							 * @param newPosition : int - position for item to be added to | 1 as the front index
+							 * Any index lower than 0 will put the item at the front of the list
+							 * Any index greater than the current largest index will put the item at the end of the list
+							 * @param newEntry : T - item to be added
+							 */
+							@Override
+							public void add(int newPosition, T newEntry) {
+								//add to the end of the list
+								if(newPosition > numberOfEntries)
+								{
+									add(newEntry);
+								}
+								//add to the middle or front of the list
+								//if the position is less than or equal to 1, put it at the beggining of the list
+								else if(newPosition <= 1)
+								{
+									//Add to the front
+									Node newNode = new Node();
+									newNode.data = newEntry;
+									newNode.next = firstNode;
+									firstNode = newNode;
+									numberOfEntries++;
+								}
+								//if the position is in the middle of the list
+								else
+								{
+									//Get to the location
+									Node curr = firstNode;
+									for(int i = 1; i < newPosition-1; i++)
+									{
+										curr = curr.next;
+									}
+									//Curr is before hte new node position
+									Node newNode = new Node();
+									newNode.data = newEntry;
+									newNode.next = curr.next;
+									curr.next = newNode;
+									numberOfEntries++;
+								}
+							}
+
+							/** 
+							Removes the entry at a given position from this list.
+							Entries originally at positions higher than the given
+							position are at the next lower position within the list,
+							and the list's size is decreased by 1.
+							@param givenPosition  An integer that indicates the position of the entry to be removed.
+							@return  A reference to the removed entry.
+							@throws  IndexOutOfBoundsException if either 
+							givenPosition < 1 or givenPosition > getLength(). 
+							*/
+							@Override
+							public T remove(int givenPosition) {
+								//If the list is empty, just throw out a default value or exception
+								if(numberOfEntries <= 0)
+								{
+									return null; //default value in this case
+								}
+								//get at the end of the list
+								else if(givenPosition >= numberOfEntries)
+								{
+									givenPosition = numberOfEntries;
+								}
+								//get at the middle or front of the list
+								//if the position is less than or equal to 1, put it at the beggining of the list
+								else if(givenPosition <= 1)
+								{
+									//point to the front of the list
+									givenPosition = 1;
+								}
+								//Special case. If the position is the front node. Remove & return the front value
+								if(givenPosition == 1)
+								{
+									Object temp = firstNode.data;
+									firstNode = firstNode.next;
+									numberOfEntries--;
+									return (T)temp;
+								}
+								//If the position is not the front node
+								//Get to the location. Go to 1 postion BEFORE target position
+								
+								Node curr = firstNode;
+								for(int i = 1; i < givenPosition - 1; i++)
+								{
+									curr = curr.next;
+								}
+								//curr is at the node before target position
+								Object temp = curr.next.data;
+								curr.next = curr.next.next;
+								numberOfEntries--;
+								return (T)temp;
+							}
+
+							/**
+							 * Clears the list of all values
+							 */
+							@Override
+							public void clear() {
+								numberOfEntries = 0;
+								firstNode = null; //By setting front to null, nothing is pointing to the front of the list, therefore java will clear everything in memory.
+							}
+
+							/** 
+							Replaces the entry at a given position in this list.
+							@param givenPosition  An integer that indicates the position of the entry to be replaced.
+							@param newEntry  The object that will replace the entry at the position givenPosition.
+							@return  The original entry that was replaced.
+							@throws  IndexOutOfBoundsException if either
+							givenPosition < 1 or givenPosition > getLength(). 
+							*/
+							@Override
+							public T replace(int givenPosition, T newEntry) {
+								//If the given position is less than or equal to 1, replace the first node
+								if(givenPosition <= 1)
+								{
+									Object temp = firstNode.data;
+									firstNode.data = newEntry;
+									return (T)temp;
+								}
+								//if the given position is too large, set it to go to the last node
+								if(givenPosition > numberOfEntries)
+								{
+									givenPosition = numberOfEntries;
+								}
+								//loop through the list, to get to the right position
+								Node curr = firstNode;
+								for(int i = 1; i < givenPosition; i++)
+								{
+									curr = curr.next;
+								}
+								Object temp = curr.data;
+								curr.data = newEntry;
+								return (T)temp;
+							}
+
+							/**
+							 * Get data at a given position
+							 * @param givenPosition : int - the poisiton number to be retrieved from
+							 * @return T - The data at the given position
+							 */
+							@Override
+							public T getEntry(int givenPosition) {
+								//If the list is empty, just throw out a default value or exception
+								if(numberOfEntries <= 0)
+								{
+									return null; //default value in this case
+								}
+								//get at the end of the list
+								else if(givenPosition >= numberOfEntries)
+								{
+									givenPosition = numberOfEntries;
+								}
+								//get at the middle or front of the list
+								//if the position is less than or equal to 1, put it at the beggining of the list
+								else if(givenPosition <= 1)
+								{
+									//point to the front of the list
+									givenPosition = 1;
+								}
+								//Everything is in order. Now find the value
+								//Have a valid position
+								//Get to the location
+								Node curr = firstNode;
+								for(int i = 1; i < givenPosition; i++)
+								{
+									curr = curr.next;
+								}
+								//Curr is at the target position
+								return (T)curr.data;
+							}
+
+							/**
+							 * Returns an array of all the items in the list
+							 * Preserves the order!
+							 * @return array : int[] - An array of the items in the list
+							 */
+							@Override
+							public T[] toArray() {
+								T[] output = (T[]) new Object[numberOfEntries]; //array to be returned. Will contain the data in each node
+								Node curr = firstNode;
+								int i = 0;
+								while(i != numberOfEntries)
+								{
+									output[i] = (T) curr.data;
+									curr = curr.next;
+									i++;
+								}
+								return output;
+							}
+
+							/**
+							 * Checks if a given target is in the list
+							 * @param anEntry : int - target to be found
+							 * @return bool : boolean - true if target is in the list, false otherwise
+							 */
+							@Override
+							public boolean contains(T anEntry) {
+								Node curr = firstNode;
+								for(int i = 1; i < numberOfEntries; i++)
+								{
+									if(curr.data == anEntry)
+									{
+										return true;
+									}
+									curr = curr.next;
+								}
+								return false;
+							}
+
+							/**
+							 * Get the length of the list, and return it.
+							 */
+							@Override
+							public int getLength() {
+								return numberOfEntries;
+							}
+
+							/**
+							 * Returns whether the list is empty or not
+							 * @return bool : boolean - True if the list is empty, false otherwise
+							 */
+							@Override
+							public boolean isEmpty() {
+								return numberOfEntries <= 0;
+							}
+							
+							/**
+							 * This method is not used in this List Type.
+							 * Only Used in double linked lists.
+							 */
+							@Override
+							public void valuesFromEnd()
+							{
+								throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+							}
+							
+							/**
+							* Get values in a circle. Runs through the list multiple times over.
+							* This shows the list is connected from front to back.
+							*/
+							@Override
+							public void valuesInACircle()
+							{
+								System.out.println("Get values in a cirlce. Starting from the first node.");
+								Node curr = firstNode;
+								for(int i = 0; i < numberOfEntries*3; i++)
+								{
+									System.out.println("Current item data:" + curr.data);
+									curr = curr.next;
+								}
+							}
+							
+						}
+						</script>
+					</section>
+					<section id="lists-circular-double-linked-list">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">CircularDoubleLinkedList File</h2>
+						<p class="fifteen">This is a class file for a circular double linked list. A circular double linked list incorporates the elements from double and circular linked lists.</br>Nodes have next and last pointers, and the first node and last node are connected.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						/**
+						 * A class demonstrates the use of a double linked circular linked linked list
+						 * CSC 210 Data Structures
+						 * Semester 1 | Fall 2018
+						 * October 3, 2018
+						 * @author Joseph Hentges
+						 */
+						public class CircularDoubleLinkedList<T> implements ListInterface<T> {
+							
+							private Node firstNode;            // Reference to first node of chain
+							private int numberOfEntries;
+
+							//Create a Node class
+							private class Node<T>
+							{
+								T data;
+								Node next;
+								Node last;
+							}
+							
+							//Constructor for the linked list
+							public CircularDoubleLinkedList()
+							{
+								numberOfEntries = 0;
+								firstNode = null;
+							}
+							
+							/**
+							 * Return a string of all the values in the List
+							 */
+							@Override
+							public String toString()
+							{        
+								String output = "Data in the List (" + getLength() + "):\n";
+								Node curr = firstNode; //pointer for the nodes
+								for(int i = 1; i <= numberOfEntries; i++)
+								{
+									output += "\t" + (i) + ":\t" + curr.data + "\n";
+									curr = curr.next;
+								}
+								return output;
+							}
+
+							/**
+							 * Add item to the end of the list
+							 * @param newEntry : T - item to be added
+							 */
+							@Override
+							public void add(T newEntry) {
+								//If the list is not empty
+								//Need to find the end of the list
+								Node newNode = new Node();
+								newNode.data = newEntry;
+								Node curr = firstNode;
+								newNode.next = null;
+								if(firstNode == null)
+								{
+									newNode.last = newNode;
+									firstNode = newNode;
+									numberOfEntries++;
+									return;
+								}
+								for(int count = 1; count < numberOfEntries; count++)
+								{
+									curr = curr.next;
+								}
+								if(numberOfEntries == 1)
+								{
+									newNode.last = firstNode;
+								}
+								else
+								{
+									newNode.last = curr;
+								}
+								curr.next = newNode;
+								firstNode.last = newNode;
+								numberOfEntries++;
+							}
+
+							/**
+							 * Add an item to a particular position
+							 * @param newPosition : int - position for item to be added to | 1 as the front index
+							 * Any index lower than 0 will put the item at the front of the list
+							 * Any index greater than the current largest index will put the item at the end of the list
+							 * @param newEntry : T - item to be added
+							 */
+							@Override
+							public void add(int newPosition, T newEntry) {
+								//add to the end of the list
+								if(newPosition > numberOfEntries)
+								{
+									add(newEntry);
+								}
+								//add to the middle or front of the list
+								//if the position is less than or equal to 1, put it at the beggining of the list
+								else if(newPosition <= 1)
+								{
+									//Add to the front
+									Node newNode = new Node();
+									newNode.data = newEntry;
+									newNode.next = firstNode;
+									firstNode.last = newNode;
+									firstNode = newNode;
+									numberOfEntries++;
+									Node curr = firstNode;
+									for(int i = 1; i < numberOfEntries; i++)
+									{
+										curr = curr.next;
+									}
+									newNode.last = curr;
+								}
+								//if the position is in the middle of the list
+								else
+								{
+									//Get to the location
+									Node curr = firstNode;
+									for(int i = 1; i < newPosition-1; i++)
+									{
+										curr = curr.next;
+									}
+									//Curr is before hte new node position
+									Node newNode = new Node();
+									newNode.data = newEntry;
+									newNode.next = curr.next;
+									curr.next = newNode;
+									newNode.last = curr;
+									if(curr.next.next != firstNode)
+									{
+										curr.next.next.last = newNode;
+									}      
+									if(curr.next.next == firstNode)
+									{
+										curr.next.next = firstNode;
+									}
+									numberOfEntries++;
+								}
+							}
+
+							/** 
+							Removes the entry at a given position from this list.
+							Entries originally at positions higher than the given
+							position are at the next lower position within the list,
+							and the list's size is decreased by 1.
+							@param givenPosition  An integer that indicates the position of the entry to be removed.
+							@return  A reference to the removed entry.
+							@throws  IndexOutOfBoundsException if either 
+							givenPosition < 1 or givenPosition > getLength(). 
+							*/
+							@Override
+							public T remove(int givenPosition) {
+								//If the list is empty, just throw out a default value or exception
+								if(numberOfEntries <= 0)
+								{
+									return null; //default value in this case
+								}
+								//get at the end of the list
+								else if(givenPosition >= numberOfEntries)
+								{
+									givenPosition = numberOfEntries;
+								}
+								//get at the middle or front of the list
+								//if the position is less than or equal to 1, put it at the beggining of the list
+								else if(givenPosition <= 1)
+								{
+									//point to the front of the list
+									givenPosition = 1;
+								}
+								//Special case. If the position is the front node. Remove & return the front value
+								if(givenPosition == 1)
+								{
+									Object temp = firstNode.data;
+									firstNode = firstNode.next;
+									firstNode.last = null;
+									numberOfEntries--;
+									return (T)temp;
+								}
+								//If the position is not the front node
+								//Get to the location. Go to 1 postion BEFORE target position
+								
+								Node curr = firstNode;
+								for(int i = 1; i < givenPosition - 1; i++)
+								{
+									curr = curr.next;
+								}
+								//curr is at the node before target position
+								Object temp = curr.next.data;
+								System.out.println("Current Data: " + curr.next.last.data);
+								curr.next.next.last = curr;
+								curr.next = curr.next.next;
+								numberOfEntries--;
+								return (T)temp;
+							}
+
+							@Override
+							public void clear() {
+								numberOfEntries = 0;
+								firstNode = null; //By setting front to null, nothing is pointing to the front of the list, therefore java will clear everything in memory.
+							}
+
+							/** 
+							Replaces the entry at a given position in this list.
+							@param givenPosition  An integer that indicates the position of the entry to be replaced.
+							@param newEntry  The object that will replace the entry at the position givenPosition.
+							@return  The original entry that was replaced.
+							@throws  IndexOutOfBoundsException if either
+							givenPosition < 1 or givenPosition > getLength(). 
+							*/
+							@Override
+							public T replace(int givenPosition, T newEntry) {
+								//If the given position is less than or equal to 1, replace the first node
+								if(givenPosition <= 1)
+								{
+									Object temp = firstNode.data;
+									firstNode.data = newEntry;
+									return (T)temp;
+								}
+								//if the given position is too large, set it to go to the last node
+								if(givenPosition > numberOfEntries)
+								{
+									givenPosition = numberOfEntries;
+								}
+								//loop through the list, to get to the right position
+								Node curr = firstNode;
+								for(int i = 1; i < givenPosition; i++)
+								{
+									curr = curr.next;
+								}
+								Object temp = curr.data;
+								curr.data = newEntry;
+								return (T)temp;
+							}
+
+							/**
+							 * Get data at a given position
+							 * @param givenPosition : int - the poisiton number to be retrieved from
+							 * @return T - The data at the given position
+							 */
+							@Override
+							public T getEntry(int givenPosition) {
+								//If the list is empty, just throw out a default value or exception
+								if(numberOfEntries <= 0)
+								{
+									return null; //default value in this case
+								}
+								//get at the end of the list
+								else if(givenPosition >= numberOfEntries)
+								{
+									givenPosition = numberOfEntries;
+								}
+								//get at the middle or front of the list
+								//if the position is less than or equal to 1, put it at the beggining of the list
+								else if(givenPosition <= 1)
+								{
+									//point to the front of the list
+									givenPosition = 1;
+								}
+								//Everything is in order. Now find the value
+								//Have a valid position
+								//Get to the location
+								Node curr = firstNode;
+								for(int i = 1; i < givenPosition; i++)
+								{
+									curr = curr.next;
+								}
+								//Curr is at the target position
+								return (T)curr.data;
+							}
+
+							/**
+							 * Returns an array of all the items in the list
+							 * Preserves the order!
+							 * @return array : int[] - An array of the items in the list
+							 */
+							@Override
+							public T[] toArray() {
+								T[] output = (T[]) new Object[numberOfEntries]; //array to be returned. Will contain the data in each node
+								Node curr = firstNode;
+								for(int i = 0; i < numberOfEntries; i++)
+								{
+									output[i] = (T) curr.data;
+									curr = curr.next;
+								}
+								return output;
+							}
+
+							/**
+							 * Checks if a given target is in the list
+							 * @param anEntry : int - target to be found
+							 * @return bool : boolean - true if target is in the list, false otherwise
+							 */
+							@Override
+							public boolean contains(T anEntry) {
+								Node curr = firstNode;
+								for(int i = 1; i < numberOfEntries; i++)
+								{
+									if(curr.data == anEntry)
+									{
+										return true;
+									}
+									curr = curr.next;
+								}
+								return false;
+							}
+
+							/**
+							 * Get the length of the list, and return it.
+							 */
+							@Override
+							public int getLength() {
+								return numberOfEntries;
+							}
+
+							/**
+							 * Returns whether the list is empty or not
+							 * @return bool : boolean - True if the list is empty, false otherwise
+							 */
+							@Override
+							public boolean isEmpty() {
+								return numberOfEntries <= 0;
+							}
+
+							/**
+							 * Go to the last node/element in the list, and read there data backwards.
+							 * This shows the list is double linked.
+							 */
+							@Override
+							public void valuesFromEnd() {
+								Node curr = firstNode;
+								for(int i = 1; i < numberOfEntries; i++)
+								{
+									curr = curr.next;
+								}
+								System.out.println("The list is currently on the last item. Item data: " + curr.data);
+								System.out.println("Going backwards in the list now...");
+								for(int i = 0; i < numberOfEntries; i++)
+								{
+									System.out.println("Current item data: " + curr.data);
+									curr = curr.last;
+								}
+							}
+
+							/**
+							* Get values in a circle backwards. Runs through the list multiple times over.
+							* This shows the list is connected from front to back.
+							*/
+							@Override
+							public void valuesInACircle() {
+								System.out.println("Get values in a cirlce backwards. Starting from the first node.");
+								Node curr = firstNode;
+								for(int i = 0; i < numberOfEntries*3; i++)
+								{
+									System.out.println("Current item data: " + curr.data);
+									curr = curr.last;
+								}
+							}
+							
+						}
+						</script>
+					</section>
+		        </section>
+				
+				<section id="recursive-methods">
+					<div class="content-header">
+		                <h1>Recursion Example and Towers of Hanoi | Recursive Methods</h1>
+						</br>
+						<h3>Programming Language : Java</h3>
+                    </div>
+					<div class="welcome">                      
+                        <h2 class="twenty">Different Type of Problem Solving : Recursion</h2>
+						<p>This program shows the use recursion to solve a problem. In the displayed program, a recursion is used in the place of a for loop to more easier solve the problem.</p>
+                        <p>The program files also show the use of recursion in a more practicle usage case. The Towers of Hanoi file, solves the simple game using recursion. It takes advantage of class files to manipulate arrays representing pegs, and integers representing disks. The program also shows some use cased for exception errors, or throws.</p>
+		            </div>
+					<div class="welcome">       
+                        <h2 class="twenty">Files Used / Created</h2>
+                        <p>Download them below. Bold represents starting files, unbold: other files.</p>
+						<p>Download a Towers of Hanoi game solver in the .zip file. It shows a recursive method that calls methods within classes.</p>
+		            </div>
+					<div class="script-source">
+		                <ul>
+							<b><li><a href="project-files/page2/recursive-methods/RecursiveMethodExample.java" download>RecursiveMethodExample.java</a></li></b>
+							<b><li><a href="project-files/page2/recursive-methods/TowersOfHanoi.zip" download>TowersOfHanoi.zip</a></li></b>
+		                </ul>
+		            </div>
+					<h2 class="title">RecursiveMethodExample File</h2>
+					<p class="fifteen">This is a main class file that shows the use of a recursive method to solve a problem. This method takes in a number, and returns an array list of the lowest multiples that multiply to that number.</p>
+					<script type="syntaxhighlighter" class="brush: js">
+					import java.util.ArrayList;
+
+					/**
+					 * Show the use of recursion to solve a problem.
+					 * October 5, 2018
+					 * @author Joseph Hentges
+					 */
+					public class NewMain {
+
+						/**
+						 * @param args the command line arguments
+						 */
+						public static void main(String[] args) {
+							ArrayList<Integer> out = recursiveMethod(500);
+							System.out.println(out.toString());
+						}
+						
+						/**
+						 * Find the lowest multiples of a given number
+						 * Example input : 100 - Output : [2,2,5,5,1]
+						 * @param input : int - An integer representing the value to find its multiples
+						 * @return output : ArrayList - An array list of integers
+						 */
+						public static ArrayList<Integer> recursiveMethod(int input)
+						{
+
+							ArrayList<Integer> output = new ArrayList<Integer>();
+							if (input < 1)
+							{
+								return output;
+							}
+							if (input == 1)
+							{
+								output.add(1);
+								return output;
+							}
+							else
+							{
+								int x = 2;
+								while (input % x != 0)
+								{
+									x++;
+								}
+								output.add(x);
+								output.addAll(recursiveMethod(input/x));
+							}
+							return output;
+						}
+					}
+					</script>
+				</section>
+
+
+		        
+		        <section id="end">
+					<div class="content-header">
+		                <a class="" href="projects-1"><i class="fa fa-arrow-left"></i></a>
+						<u><a class="not-page" href="projects-1">1</a></u>
+						<u><a class="" href="#">2</a></u>
+						<a class="dead-arrow" href="#"><i class="fa fa-arrow-right"></i></a>
+                    </div>
+		        </section>
+		    </div>
+		</div>
+		
+		
+		<!-- Essential JavaScript Libraries
+		==============================================-->
+        <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.nav.js"></script>
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shCore.js"></script> 
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shBrushXml.js"></script> 
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shBrushCss.js"></script> 
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shBrushJScript.js"></script> 
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shBrushPhp.js"></script> 
+        <script type="text/javascript">
+            SyntaxHighlighter.all()
+        </script>
+        <script type="text/javascript" src="../js/custom.js"></script>
+		
+    </body>
+</html>

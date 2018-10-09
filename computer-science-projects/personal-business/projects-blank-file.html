@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Undergraduate</title>
+		<link href="../img/SCM_logo.png" rel="icon" type="image/x-icon" 
+        <meta name="description" content="">
+		<!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- <link rel="shortcut icon" href="img/favicon.png"> -->
+        
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet'>
+        
+        <!-- Syntax Highlighter -->
+        <link rel="stylesheet" type="text/css" href="../syntax-highlighter/styles/shCore.css" media="all">
+        <link rel="stylesheet" type="text/css" href="../syntax-highlighter/styles/shThemeDefault.css" media="all">
+		
+		<!-- Font Awesome CSS-->
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <!-- Normalize/Reset CSS-->
+		<link rel="stylesheet" href="../css/normalize.min.css">
+		<!-- Main CSS-->
+        <link rel="stylesheet" href="../css/main.css">
+		
+    </head>
+	
+    <body id="welcome">
+    
+        <aside class="left-sidebar">
+            <div class="logo">
+                <a href="#welcome">
+                    <img src="../img/SCM_logo.png" alt="">
+                </a>
+            </div>
+            <nav class="left-nav">
+                <ul id="nav">
+                    <li class="current"><a href="#welcome">Welcome</a></li>
+					<li><a href="#algorithm-heap-sort">Algorithm | Heap Sort</a></li>
+                </ul>
+            </nav>
+        </aside>
+		
+		<div id="main-wrapper">
+		    <div class="main-content">
+		        <section id="welcome">
+		            <div class="content-header">
+		                <h1 class="big-title">Undergraduate Projects</h1>
+						</br>
+						<u><a target="_blank" href="university-undergraduate-contents.pdf"><h3>Click to View Table of Contents</h3></a></u>
+						</br>
+						<a class="" href="projects-1.html"><i class="fa fa-arrow-left"></i></a>
+						<u><a class="not-page" href="projects-1.html">1</a></u>
+						<u><a class="" href="#">2</a></u>
+						<a class="dead-arrow" href="#"><i class="fa fa-arrow-right"></i></a>
+		            </div>
+		            <div class="welcome">
+                        
+                        <h2 class="twenty">Assignments and Projects from My Undergraduate</h2>
+
+                        <p>Assignments and projects I felt were worth documenting/saving for the future. These aren't necessarily large or particularly important, but they show useful techniques or functions.</p>
+
+                        <p>Some sections show whole programs or files, while other show only functions/methods that can be used in any program.</p>
+		            </div>
+		            
+		            <div class="features">
+		                <h2 class="twenty">This Page Features</h2>
+		                
+		                <ul>
+                            <li>Heap Sort Algorithm</li>
+		                </ul>
+		            </div>
+
+		        </section>	        
+				
+				<section id="algorithm-heap-sort">
+					<div class="content-header">
+		                <h1>Heap Sort | Algorithm</h1>
+						</br>
+						<h3>Programming Language : Java</h3>
+                    </div>
+					<div class="welcome">                      
+                        <h2 class="twenty">Sort an Array Using the Heap Sort Algorithm</h2>
+						<p>This program shows the use of a sorting algorithm called Heap Sort.</p>
+                        <p>The algorithm sorts an array of values from smallest to largest in place (sorting the array without creating additional arrays).</p>
+		            </div>
+					<div class="welcome">       
+                        <h2 class="twenty">Algorithm Documentation</h2>
+                        <p>Documentation on the algorithm: pseudocode, time complexity, loop invarient...</p>
+						<p>Download the PDF Below</p>
+		            </div>
+					<div class="script-source">
+		                <ul>
+		                    <li><a href="project-files/heap-sort-algorithm/documentation.pdf" download>documentation.pdf</a></li>
+		                </ul>
+		            </div>
+					<div class="welcome">       
+                        <h2 class="twenty">Files Used / Created</h2>
+                        <p>Download them below. Bold represents starting files, unbold: other files.</p>
+						<p>Download an example of this algorithm being used.</p>
+		            </div>
+					<div class="script-source">
+		                <ul>
+		                    <li><a href="project-files/heap-sort-algorithm/HeapSortAlgorithm.java" download>HeapSortAlgorithm.java</a></li>
+		                </ul>
+		            </div>
+					
+					<h2 class="title">Heap Sort</h2>
+		            <p class="fifteen">This is the overall method that sorts an array. It calls build max heap, and max heapify.</p>
+		            <script type="syntaxhighlighter" class="brush: js">
+					/**
+					 * Call this method to sort an array. 
+					 * This method calls all other methods to complete the sort.
+					 * @param A : int[] - the array to be sorted
+					 * @param n : int - the length of the array
+					 * @return A : int[] the completely sorted array
+					 */
+					public static int[] HEAP_SORT(int[] A, int n)
+					{
+						A = BUILD_MAX_HEAP(A, n);
+						for(int i = n-1; i > 1; i--)
+						{
+							int temp = A[0];
+							A[0] = A[i];
+							A[i] = temp;
+							A = MAX_HEAPIFY(A, 0, i-1);
+						}
+						return A;
+					}
+		            </script>					
+		        </section>
+
+
+		        
+		        <section id="end">
+					<div class="content-header">
+		                <a class="" href="projects-1.html"><i class="fa fa-arrow-left"></i></a>
+						<u><a class="not-page" href="projects-1.html">1</a></u>
+						<u><a class="" href="#">2</a></u>
+						<a class="dead-arrow" href="#"><i class="fa fa-arrow-right"></i></a>
+                    </div>
+		        </section>
+		    </div>
+		</div>
+		
+		
+		<!-- Essential JavaScript Libraries
+		==============================================-->
+        <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.nav.js"></script>
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shCore.js"></script> 
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shBrushXml.js"></script> 
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shBrushCss.js"></script> 
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shBrushJScript.js"></script> 
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shBrushPhp.js"></script> 
+        <script type="text/javascript">
+            SyntaxHighlighter.all()
+        </script>
+        <script type="text/javascript" src="../js/custom.js"></script>
+		
+    </body>
+</html>

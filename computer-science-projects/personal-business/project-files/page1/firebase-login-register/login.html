@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="blank">
+    <meta name="keywords" content="#">
+    <meta name="author" content="Joseph Hentges">
+    <title>Firebase HTML Login</title>
+    <link href="img/icon.png" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="loginStyle.css">
+    
+	<script src="firebase given url code"></script>
+	<script>
+		// Initialize Firebase
+		// All given by Firebase Account
+		var config = {
+			apiKey: "",
+			authDomain: "",
+			databaseURL: "",
+			projectId: "",
+			storageBucket: "",
+			messagingSenderId: ""
+	    };
+	    firebase.initializeApp(config);
+	</script>
+  </head>
+
+  <body id="top">
+
+    <div class="login-page">
+      <div class="form">
+        <div class="login-form">
+
+          <p id="error" style="font-size:15px; color:#FF3C3C"><p>
+          <input type="text" style="text-align:center" placeholder="email address" id="txtEmail"/>
+
+          <input type="password" style="text-align:center" placeholder="password" id="txtPassword"/>
+
+          <button id="btnSignin" class="btn btn-secondary">login</button>
+
+          <p style="font-size:15px" class="message">Not registered? <a href="register.html">Create an account</a></p>
+
+          <p style="font-size:15px" class="message"><a href="forgotpassword.html">Forgot password?</a></p>
+
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+  <script> 
+	var txtEmail = document.getElementById("txtEmail");
+	var txtPassword = document.getElementById("txtPassword");
+	var btnSignin = document.getElementById("btnSignin");
+	
+	btnSignin.addEventListener("click", e => 
+	{
+		var error = document.getElementById("error").innerHTML = "";
+		
+		const email = txtEmail.value;
+		const password = txtPassword.value;
+		const auth = firebase.auth();
+		
+		const promise = auth.signInWithEmailAndPassword(email, password);
+		promise
+			.catch(error => {
+				var error = document.getElementById("error");
+				error.innerHTML += "Invalid email or password";
+			});
+	});
+  </script>
+  <script>
+	var newPostKey = firebase.database().ref();
+	
+	firebase.auth().onAuthStateChanged(firebaseUser => {
+		if (firebaseUser) 
+		{
+			window.open("redirection.html","_self");
+		} else 
+		{
+			console.log(firebaseUser);
+		}
+	});
+  </script>
+
+</html>

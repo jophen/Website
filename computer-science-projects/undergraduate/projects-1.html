@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Undergraduate</title>
+		<link href="../img/SCM_logo.png" rel="icon" type="image/x-icon" 
+        <meta name="description" content="">
+		<!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- <link rel="shortcut icon" href="img/favicon.png"> -->
+        
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet'>
+        
+        <!-- Syntax Highlighter -->
+        <link rel="stylesheet" type="text/css" href="../syntax-highlighter/styles/shCore.css" media="all">
+        <link rel="stylesheet" type="text/css" href="../syntax-highlighter/styles/shThemeDefault.css" media="all">
+		
+		<!-- Font Awesome CSS-->
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <!-- Normalize/Reset CSS-->
+		<link rel="stylesheet" href="../css/normalize.min.css">
+		<!-- Main CSS-->
+        <link rel="stylesheet" href="../css/main.css">
+		
+    </head>
+	
+    <body id="welcome">
+    
+        <aside class="left-sidebar">
+            <div class="logo">
+                <a href="#welcome">
+                    <img src="../img/SCM_logo.png" alt="">
+                </a>
+            </div>
+            <nav class="left-nav">
+                <ul id="nav">
+                    <li class="current"><a href="#welcome">Welcome</a></li>
+                    <li><a href="#ship-object-file-io">File I/O | Ship Objects</a></li>
+					<li><a class="indent" href="#ship-object-class-file">Ship Object Class File</a></li>
+					<li><a class="indent" href="#ship-driver-file">Driver File</a></li>
+					<li><a href="#array-linked-list-bags">Bags | Array & Linked List</a></li>
+					<li><a class="indent" href="#bags-bag-interface">Bag Interface</a></li>
+					<li><a class="indent" href="#bags-array-bag">Array Bag</a></li>
+					<li><a class="indent" href="#bags-linked-list-bag">Linked List Bag</a></li>
+					<li><a href="#array-resizable-bags">Resizable Bags | Array</a></li>
+					<li><a class="indent" href="#resizable-bags-bag-interface">Bag Interface</a></li>
+					<li><a class="indent" href="#resizable-bags-array-bag">Array Bag</a></li>
+					<li><a href="#array-linked-list-lists">Lists | Array & Linked List</a></li>
+					<li><a class="indent" href="#lists-list-interface">List Interface</a></li>
+					<li><a class="indent" href="#lists-array-based-list">Array Based List</a></li>
+					<li><a class="indent" href="#lists-link-based-list">Link Based List</a></li>
+                </ul>
+            </nav>
+        </aside>
+		
+		<div id="main-wrapper">
+		    <div class="main-content">
+		        <section id="welcome">
+		            <div class="content-header">
+		                <h1 class="big-title">Undergraduate Projects</h1>
+						</br>
+						<u><a target="_blank" href="university-undergraduate-contents.pdf"><h3>Click to View Table of Contents</h3></a></u>
+						</br>
+						<a class="dead-arrow" href="#"><i class="fa fa-arrow-left"></i></a>
+						<u><a class="" href="#">1</a></u>
+						<u><a class="not-page" href="projects-2">2</a></u>
+						<a class="" href="projects-2"><i class="fa fa-arrow-right"></i></a>
+		            </div>
+		            <div class="welcome">
+                        
+                        <h2 class="twenty">Assignments and Projects from My Undergraduate</h2>
+
+                        <p>Assignments and projects I felt were worth documenting/saving for the future. These aren't necessarily large or particularly important, but they show useful techniques or functions.</p>
+
+                        <p>Some sections show whole programs or files, while other show only functions/methods that can be used in any program.</p>
+						
+						<p>I mark what programming language I use in each project as well.</p>
+		            </div>
+		            
+		            <div class="features">
+		                <h2 class="twenty">This Page Features</h2>
+		                
+		                <ul>
+		                    <li>File I/O</li>
+							<li>Bags</li>
+							<li>Resizable Bags</li>
+							<li>Lists</li>
+		                </ul>
+		            </div>
+
+		        </section>
+
+		        <section id="ship-object-file-io">
+					<div class="content-header">
+		                <h1>Ship Object Creation | File I/O</h1>
+						</br>
+						<h3>Programming Language : Java</h3>
+                    </div>
+					<div class="welcome">                      
+                        <h2 class="twenty">Use File I/O to Generate and Document Ships</h2>
+						<p>This program shows the use of class files to generate objects, as well as manipulating txt files.</p>
+                        <p>The program uses a text file containing ship names to generate ship objects. The ships are placed into an array and then documented.</p>
+		            </div>
+					<div class="welcome">       
+                        <h2 class="twenty">Files Used / Created</h2>
+                        <p>Download them below. Bold represents starting files, unbold: other files.</p>
+		            </div>
+					<div class="script-source">
+		                <ul>
+		                    <b><li><a href="project-files/page1/ship-object-file-io/Driver.java" download>Driver.java</a></li></b>
+		                    <b><li><a href="project-files/page1/ship-object-file-io/Ship.java" download>Ship.java</a></li></b>
+		                    <b><li><a href="project-files/page1/ship-object-file-io/ShipNames.txt" download>ShipNames.txt</a></li></b>
+		                    <li><a href="project-files/page1/ship-object-file-io/MyFleet.txt" download>MyFleet.txt</a></li>
+		                </ul>
+		            </div>
+					<section id="ship-object-class-file">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">Ship Object Class File</h2>
+						<p class="fifteen">The class file is used for the creation of ship objects. This manipulates the ships values, as well as returns them to be read in the driver file.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						/**
+						 * Lecture #3 -- File I/O
+						 * The purpose of this program is to use utilize classes, and file i/o
+						 * Write a program that creates 250 different ships.
+						 * CSC 210 Data Structures
+						 * Semester 1 | Fall 2018
+						 * September 11, 2018
+						 * @author Joseph Hentges
+						 */
+						public class Ship {
+							
+							//Variables used in the creation of each ship
+							private String shipName;     //The name of the ship
+							private double maxTonnage;   //The max tonnage the ship can hold
+							private int maxSpeed;        //The ships max speed
+							private int distance;        //The distance the ship is from its desired destination
+
+							/**
+							 * Get the name of the ship
+							 * @return shipName : String
+							 */
+							public String getShipName() 
+							{
+								return shipName;
+							}
+
+							/**
+							 * Set the name of the ship.
+							 * @param shipName : String
+							 */
+							public void setShipName(String shipName) 
+							{
+								this.shipName = shipName;
+							}
+
+							/**
+							 * Get the maxTonnage of the ship
+							 * @return maxTonnage : double
+							 */
+							public double getMaxTonnage() 
+							{
+								return maxTonnage;
+							}
+
+							/**
+							 * Set the maxTonnage of the ship
+							 * @param maxTonnage : double
+							 */
+							public void setMaxTonnage(double maxTonnage) 
+							{
+								this.maxTonnage = maxTonnage;
+							}
+
+							/**
+							 * Get the maxSpeed of the ship
+							 * @return maxSpeed : int
+							 */
+							public int getMaxSpeed() 
+							{
+								return maxSpeed;
+							}
+
+							/**
+							 * Set the maxSpeed of the ship
+							 * @param maxSpeed : int
+							 */
+							public void setMaxSpeed(int maxSpeed) 
+							{
+								this.maxSpeed = maxSpeed;
+							}
+							
+							/**
+							 * Get the distance of the ship. Distance to the destination.
+							 * @return distance: int
+							 */
+							public int getDistance() 
+							{
+								return distance;
+							}
+
+							/**
+							 * Set the distance of the ship. Distance to the destination
+							 * @param distance : int
+							 */
+							public void setDistance(int distance) 
+							{
+								this.distance = distance;
+							}
+							
+							
+							@Override
+							public String toString()
+							{
+								return getShipName() + "~" + getMaxTonnage() + "~" + getMaxSpeed() + "~" + getDistance();
+							}
+							
+						}
+						</script>
+					</section>
+					<section id="ship-driver-file">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">Driver File</h2>
+						<p class="fifteen">The driver file is where the program runs. In the sample code below I created 250 ships with random max tonnage, max speed and distance. The ships are placed into an array, and then their values printed to a txt file, called MyFleet.txt</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						import java.io.File;
+						import java.io.FileNotFoundException;
+						import java.io.PrintWriter;
+						import java.text.DecimalFormat;
+						import java.util.ArrayList;
+						import java.util.Random;
+						import java.util.Scanner;
+
+						/**
+						 * Lecture #3 -- File I/O
+						 * The purpose of this program is to use utilize classes, and file i/o
+						 * Write a program that creates 250 different ships.
+						 * CSC 210 Data Structures
+						 * Semester 1 | Fall 2018
+						 * September 11, 2018
+						 * @author Joseph Hentges
+						 */
+
+						/**
+						 * The Driver.java file will run the program.
+						 */
+						public class Driver {
+							
+							/**
+							 * This is where all the methods are called and run through.
+							 * @param args the command line arguments
+							 */
+							public static void main(String[] args) throws FileNotFoundException {
+								String[] shipNames = getShipNames("ShipNames.txt");
+								Ship[] fleet = getAllShips(shipNames);
+								documentShips(fleet, "MyFleet.txt");
+							}
+							
+							/**
+							 * Print out each ship, and write their data to a text file.
+							 * The ship documentation formating is in the toString method in Ship.java
+							 * @param fleet : Ship[] - The array of ship objects
+							 * @param outputFileName : String - The name of the file I'm outputting to
+							 */
+							public static void documentShips(Ship[] fleet, String outputFileName) throws FileNotFoundException
+							{
+								File output = new File(outputFileName); //Open the file
+								PrintWriter outWriter = new PrintWriter(output); //Create a writer for the file
+								//Run through the fleet of ships and write them to the file.
+								for(int i = 0; i < fleet.length; i++)
+								{
+									System.out.println("Ship Number: " + (i+1) + " | " + fleet[i].toString());
+									outWriter.println(fleet[i].toString());
+								}
+								outWriter.close(); //close the opened file.
+							}
+							
+							/**
+							 * Create as many ships as there are names (251), and return the fleet.
+							 * @param shipNames : String[] - An array of ship names.
+							 * @return fleet : Ship[] - An array of Ship objects.
+							 */
+							public static Ship[] getAllShips(String[] shipNames)
+							{
+								Ship[] fleet = new Ship[shipNames.length-1]; //Create an empty array for Ships (shipNames contains 251 names, so remove 1 to make it exactly 250)
+								//Create three variables used in the create of ships. Will be filled with random values
+								double tonnage;
+								int speed;
+								int distance;
+								for(int i = 0; i < fleet.length; i++)
+								{
+									Random gen = new Random();//Create a generator for random values
+									tonnage = 100.0 + (100000.0 - 100.0) * gen.nextDouble(); //Random double (100.0 to 100,000.0)
+									speed = gen.nextInt(100)+1; //Random integer (1 - 100)
+									distance = gen.nextInt(2000); //Random integer (0 - 2000)
+									fleet[i] = createShip(shipNames[i], tonnage, speed, distance); //Add the ship to the fleet
+								}
+								return fleet;
+							}
+							
+							/**
+							 * With the passed in values, create and return a ship object.
+							 * @param name : String
+							 * @param tonnage : double
+							 * @param speed : int
+							 * @param distance : distance
+							 * @return 
+							 */
+							public static Ship createShip(String name, double tonnage, int speed, int distance)
+							{
+								Ship newShip = new Ship();
+								newShip.setShipName(name);
+								newShip.setMaxTonnage(tonnage);
+								newShip.setMaxSpeed(speed);
+								newShip.setDistance(distance);
+								return newShip;
+							}
+							
+							/**
+							 * Method to grab all of the values in the passed in text file.
+							 * Places them into a String array, and returns it.
+							 * @param fileName : String
+							 * @return String[] shipNames : String[] containing all the values in the passed in txt file.
+							 * @throws FileNotFoundException 
+							 */
+							public static String[] getShipNames(String fileName) throws FileNotFoundException
+							{
+								ArrayList<String> shipNamesArray = new ArrayList<String>(); //Create a ArraList for Strings
+								Scanner dataReader = new Scanner(new File(fileName)); //Create dataReader to read the values in the txt file
+								//While loop to run through all lines in the text file, and adding them to the array list
+								while(dataReader.hasNext())
+								{
+									String line = dataReader.nextLine();
+									shipNamesArray.add(line);
+								}
+								dataReader.close(); //Close the opened file
+								String[] shipNames = new String[shipNamesArray.size()]; //Create an array of strings
+								return shipNamesArray.toArray(shipNames); //pass the values in the arrayList to the strings, and return
+							}
+						}
+						</script>
+					</section>
+		        </section>
+				
+				<section id="array-linked-list-bags">
+					<div class="content-header">
+		                <h1>Arrays & Linked Lists | Bags</h1>
+						</br>
+						<h3>Programming Language : Java</h3>
+                    </div>
+					<div class="welcome">                      
+                        <h2 class="twenty">Use Arrays or Linked Lists to Manipulate Bags</h2>
+						<p>This program shows the use of Arrays and Linked Lists to generate Bags.</p>
+                        <p>These Bags can contain any data type (integers, strings, char...).</p>
+		            </div>
+					<div class="welcome">       
+                        <h2 class="twenty">Files Used / Created</h2>
+                        <p>Download them below. Bold represents starting files, unbold: other files.</p>
+		            </div>
+					<div class="script-source">
+		                <ul>
+		                    <b><li><a href="project-files/page1/array-linked-list-bags/Bag.java" download>Bag.java</a></li></b>
+							<b><li><a href="project-files/page1/array-linked-list-bags/BagArray.java" download>BagArray.java</a></li></b>
+							<b><li><a href="project-files/page1/array-linked-list-bags/BagLinked.java" download>BagLinked.java</a></li></b>
+							<b><li><a href="project-files/page1/array-linked-list-bags/Driver.java" download>Driver.java</a></li></b>
+							<b><li><a href="project-files/page1/array-linked-list-bags/SpeedTestingDriver.java" download>SpeedTestingDriver.java</a></li></b>
+		                </ul>
+		            </div>
+					<section id="bags-bag-interface">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">Bag File | Interface</h2>
+						<p class="fifteen">This is the interface for the bags. Methods/Functions are declared here, and will be called as abstract methods in class files.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						/**
+						 * This is the interface for Bags
+						 * CSC 210 Data Structures
+						 * Semester 1 | Fall 2018
+						 * September 19, 2018
+						 * @author Joseph Hentges
+						 */
+
+						public interface Bag<T> {
+							
+							/**
+							 * @return size : int - The size of the array 
+							 */
+							int size();
+							
+							/**
+							 * Add data to the bag
+							 * @param data : T - The data we want to add
+							 * @return true/false : boolean - If the value was successfully added
+							 */ 
+							boolean add(T data);
+							
+							/**
+							 * Remove an item based on the id specified
+							 * @param value : int - The ID of the item we want to remove
+							 * @return T : data - The item removed from the bag
+							 */
+							T remove(int value);
+							
+							/**
+							 * Remove items based on being less than 0
+							 */
+							void removeLessThanZero();
+							
+							/**
+							 * Remove a random data from the bag
+							 * @return T : data - A random data from the bag
+							 */ 
+							T remove();
+							
+							/**
+							 * Return an array of all the data in the bag
+							 * @return T[] : array of data
+							 */
+							T[] removeAll();
+							
+							/**
+							 * Clears all data from the bag
+							 */
+							void clear();
+							
+							/**
+							 * Get how many of a certain piece of data the bag contains
+							 * @param value : int - The id of some data in the bag
+							 * @return value : int - The number of how many there are
+							 */ 
+							int howMany(int value);
+							
+							/**
+							 * Find if the bag contains a certain piece of data
+							 * @param value : int - The id of some data to be found
+							 * @return true/false : boolean - whether or not the bag contains that data
+							 */ 
+							boolean contains(int value);
+							
+							/**
+							 * Return an array of all the data in the bag
+							 * @return T : array - An array of all the data the bag contains
+							 */ 
+							T[] toArray();
+							
+							/**
+							 * Return an String of the bag
+							 * @return toString : String - A string of all the data the bag contains
+							 */
+							String toString();
+						}
+						</script>
+					</section>
+					<section id="bags-array-bag">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">BagArray File | Class</h2>
+						<p class="fifteen">This is the class file for a bag using arrays. This implements the Bag interface.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						import java.util.Random;
+
+						/**
+						 * This is the class for Bags using Arrays
+						 * CSC 210 Data Structures
+						 * Semester 1 | Fall 2018
+						 * September 19, 2018
+						 * @author Joseph Hentges
+						 */
+
+						public class BagArray<T> implements Bag
+						{
+							
+							private T[] array; //An array of all the data in bag
+							private int items = 0; //An integer to represent the amount of data in the array (bags array)
+							
+							/**
+							 * @param size : int - The size of the array created
+							 */
+							public BagArray(int size)
+							{
+								array = (T[]) new Object[size];
+							}
+							
+							/**
+							 * Create and return a String of the data in the Bag (array)
+							 * @return toString : String - A string of all the values in the Bag (array)
+							 */
+							public String toString()
+							{
+								String output = "ArrayBag{count=" + items + "}:\n";
+								for (int i = 0; i < items; i++)
+								{
+									output += "\t"+array[i]+"\n";
+								}
+								return output;
+							}
+
+							/**
+							 * Get the number of items in the bag
+							 * @return items : int - The amount of items in the bag
+							 */ 
+							@Override
+							public int size() {
+								return items;
+							}
+
+							/**
+							 * Add data to the bag | array
+							 * @param data : Object : some particular object (of some data type)
+							 * @return true/false : Boolean - did the data successfully add to the bag (array)
+							 */
+							@Override
+							public boolean add(Object data) {
+								//If items equals the max amount of data the bag (array) can hold, don't try to add more data
+								if(items == array.length)
+								{
+									return false; //The data does not successfully add
+								}
+								//Hope that the object is the right type of data
+								
+								array[items] = (T)data; //Put the data into the array
+								//If the cast failed (data to T type), Java will kick us out with an exception
+								
+								items++; //Increment items to show that another piece of data was added to the bag (array)
+								
+								return true; //The data does successfully add
+							}
+
+							/**
+							 * Remove an item based on the id specified
+							 * @param value : int - The ID of the item we want to remove
+							 * @return T : data - The item removed from the bag
+							 */
+							@Override
+							public Object remove(int value) {
+								throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+							}
+							
+							/**
+							 * Remove items based on being less than 0
+							 */
+							@Override
+							public void removeLessThanZero()
+							{
+								int curr = 0;
+								for (int i = 0; i < items; i++)
+								{
+									if (array[i].hashCode() > 0)
+									{
+										array[curr] = array[i];
+										curr++;
+									}
+								}
+								items = curr;
+							}
+
+							/**
+							 * Get a random piece of data from the array
+							 * @return temp : Object - return some data from the bag (data)
+							 */
+							@Override
+							public Object remove() {
+								//Check for there still being items in the bag (array) | Return null if the bag (array) is empty
+								if(items <= 0)
+								{
+									return null;
+								}
+								
+								Random gen = new Random(); //Generator to create random values
+								int index = gen.nextInt(items); // (max - min + 1) + min | A random index to be removed from the bag (array)
+								
+								Object temp = array[index]; //Get some value from the bag (array)
+								
+								array[index] = array[items - 1]; //move the data over
+								array[items-1] = null; 
+								items--; //decrement the amount of items in the bag (array)
+								
+								return temp;
+							}
+
+							/**
+							 * Remove and return all data from the bag (array)
+							 * @return temp : Object - An array of data the bag (array) contained
+							 */
+							@Override
+							public Object[] removeAll() {
+								Object[] temp = toArray(); //Create a temporary array (temp) to be returned
+								
+								clear(); //Clear the bag (array) of all items.
+								
+								return temp;
+							}
+
+							/**
+							 * Clear all items for the bag (array) and set them to null.
+							 * @param void
+							 * @return void
+							 */
+							@Override
+							public void clear() {
+								for(int i = 0; i < array.length; i++)
+								{
+									array[i] = null;
+								}
+								items = 0;
+							}
+							
+							/**
+							 * Get how many of a certain piece of data the bag contains
+							 * @param value : int - The id of some data in the bag
+							 * @return value : int - The number of how many there are
+							 */ 
+							@Override
+							public int howMany(int value) {
+								int counter = 0; //Counter to hold onto the number of times a number comes up in the bag
+								
+								//Use a for loop to count to amount of times value shows up in the bag
+								for(int i = 0; i < items; i++)
+								{
+									if(array[i].hashCode() == value)
+									{
+										counter++;
+									}
+								}
+								return counter;
+							}
+
+							/**
+							 * Find if the bag contains a certain piece of data
+							 * @param value : int - The id of some data to be found
+							 * @return true/false : boolean - whether or not the bag contains that data
+							 */ 
+							@Override
+							public boolean contains(int value) {      
+								return (howMany(value) >= 1); //Return true if there is at least 1 of the value, false otherwise
+							}
+
+							/**
+							 * Return an array of all the data in the bag
+							 * @return T : array - An array of all the data the bag contains
+							 */ 
+							@Override
+							public Object[] toArray() {
+								Object[] temp = new Object[items]; //Create a temporary array (temp) to be returned
+								//Add all value from the bag (array) to the temporary array
+								for(int i = 0; i < items; i++)
+								{
+									temp[i] = array[i];
+								}
+								return temp;
+							}
+						}
+						</script>
+					</section>
+					<section id="bags-linked-list-bag">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">BagLinked File | Class</h2>
+						<p class="fifteen">This is the class file for a bag using linked lists. This implements the Bag interface.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						/**
+						 * This is the class for Bags using LinkedLists
+						 * CSC 210 Data Structures
+						 * Semester 1 | Fall 2018
+						 * September 21, 2018
+						 * @author Joseph Hentges
+						 */
+
+						public class BagLinked<T> implements Bag
+						{
+							private int items; //A counter for the amount of items in the bag
+							private Node front;
+							private class Node
+							{
+								T value; //The value of the node | some sort of data
+								Node next; //The next node in the linkedList | Either some address or null
+							}
+							
+							//Create a Bag of linkedList
+							public BagLinked()
+							{
+								items = 0;
+								front = null;
+							}
+							
+							/**
+							 * Return a string of all the values in the linkedList (Bag)
+							 * @return list : String - String of all the values in the bag
+							 */
+							public String toString()
+							{
+								String output = "LinkedBag:\n";
+								Node curr = front;
+								while(curr != null)
+								{
+									output += "\t"+curr.value+"\n";
+									curr = curr.next;
+								}
+								return output;
+							}
+							
+							/**
+							 * @return size : int - The size of the array 
+							 */
+							@Override
+							public int size() {
+								return items;
+							}
+
+							/**
+							 * Add data to the bag
+							 * @param data : T - The data we want to add
+							 * @return true/false : boolean - If the value was successfully added
+							 */ 
+							@Override
+							public boolean add(Object data) {
+								// 1 Build node
+								// 2 Fill node | value & next
+								// 3 move front
+								
+								Node newNode = new Node();
+								newNode.value = (T)data;
+								newNode.next = front;
+								front = newNode;
+								items++;
+								return true;
+							}
+
+							/**
+							 * Remove an item based on the id specified
+							 * @param value : int - The ID of the item we want to remove
+							 * @return T : data - The item removed from the bag
+							 */
+							@Override
+							public Object remove(int value) {
+								throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+							}
+
+							@Override
+							public void removeLessThanZero() {
+								while (front != null && front.value.hashCode() <= 0)
+								{
+									front = front.next;
+								}
+								Node curr = front;
+								while(curr.next != null)
+								{
+									if (curr.next.value.hashCode() <= 0)
+									{
+										curr.next = curr.next.next;
+									}
+									else
+									{
+										curr = curr.next;
+									}
+								}
+							}
+
+							/**
+							 * Remove a random data from the bag
+							 * @return T : data - A random data from the bag
+							 */ 
+							@Override
+							public Object remove() {
+								//unfil the node
+								//move front
+								//return data
+								
+								// if there are no items in the bag, return null
+								if(front == null)
+								{
+									return null;
+								}
+								
+								Object temp = front.value;
+								front = front.next;
+								items--;
+								
+								//if the node doesn't have anything pointing to it, it will be automatically removed
+								
+								return temp;
+							}
+
+							/**
+							 * Return an array of all the data in the bag
+							 * @return T[] : array of data
+							 */
+							@Override
+							public Object[] removeAll() {
+								Object[] temp = toArray(); //get an array of all the data in the bag (linkedList)
+								
+								clear(); //remove all the items in the bag
+								
+								items = 0;
+								
+							   return temp;
+							}
+
+							/**
+							 * Clears all data from the bag
+							 */
+							@Override
+							public void clear() {
+								//Remove the front pointer is pointing to nothing, java will automatically remove the whole linkedList
+								front = null;
+								items = 0;
+							}
+
+							/**
+							 * Get how many of a certain piece of data the bag contains
+							 * @param value : int - The id of some data in the bag
+							 * @return value : int - The number of how many there are
+							 */ 
+							@Override
+							public int howMany(int value) {
+								int counter = 0;
+								Node curr = front;
+								while(curr != null)
+								{
+									if(curr.value.hashCode() == value)
+									{
+										counter++;
+									}
+									curr = curr.next;
+								}
+								return counter;
+							}
+
+							/**
+							 * Find if the bag contains a certain piece of data
+							 * @param value : int - The id of some data to be found
+							 * @return true/false : boolean - whether or not the bag contains that data
+							 */ 
+							@Override
+							public boolean contains(int value) {
+								return (howMany(value) >= 1);
+							}
+
+							/**
+							 * Return an array of all the data in the bag
+							 * @return T : array - An array of all the data the bag contains
+							 */ 
+							@Override
+							public Object[] toArray() {
+								Object[] temp = new Object[items];
+								Node curr = front; //pointer to walk through the linkedList
+								int i = 0;
+								while(curr != null)
+								{
+									temp[i] = curr.value;
+									curr = curr.next;
+									i++;
+								}
+								return temp;
+							}
+						}
+						</script>
+					</section>
+		        </section>
+				
+				<section id="array-resizable-bags">
+					<div class="content-header">
+		                <h1>Arrays | Resizable Bags</h1>
+						</br>
+						<h3>Programming Language : Java</h3>
+                    </div>
+					<div class="welcome">                      
+                        <h2 class="twenty">Use Arrays to Manipulate Resizable Bags</h2>
+						<p>This program shows the use of Arrays and Linked Lists to generate Bags. Similar to normal bags, these contain values of any type. However, this type of bag allows the size to be dynamic.</p>
+                        <p>The initial set size of the array (Bag) is not set in stone, and changes upon the limit being reached. When the Bag is full, and a new item is to be added, the Bag size will double (copy over all values), and allow for additional entries.
+						<p>These Bags can contain any data type (integers, strings, char...).</p>
+		            </div>
+					<div class="welcome">       
+                        <h2 class="twenty">Files Used / Created</h2>
+                        <p>Download them below. Bold represents starting files, unbold: other files.</p>
+						<p>ResizableArrayBagDemo.java is the Driver file for testing methods within the resizable bags.</p>
+		            </div>
+					<div class="script-source">
+		                <ul>
+		                    <b><li><a href="project-files/page1/array-resizable-bags/BagInterface.java" download>BagInterface.java</a></li></b>
+							<b><li><a href="project-files/page1/array-resizable-bags/ResizableArrayBag.java" download>ResizableArrayBag.java</a></li></b>
+							<b><li><a href="project-files/page1/array-resizable-bags/ResizableArrayBagDemo.java" download>ResizableArrayBagDemo.java</a></li></b>
+		                </ul>
+		            </div>
+					<section id="resizable-bags-bag-interface">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">BagInterface File | Interface</h2>
+						<p class="fifteen">This is the interface for the resizable bags. Methods/Functions are declared here, and will be called as abstract methods in class files.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						/**
+						 * This is the interface for the ArrayBag
+						 * CSC 210 Data Structures Lab
+						 * September 26, 2018
+						 * @author Joseph Hentges
+						 */
+
+						public interface BagInterface<T>
+						{
+
+							/**
+							 * Test two bags to see if they contain the same values
+							 * @param testBag : BagInterface - A bag to be tested against the current bag
+							 * @return boolean - whether the two bags are equal
+							 */
+							public boolean equal(BagInterface<T> testBag);
+							
+							/**
+							 * Gets the current number of entries in this bag.
+							 *
+							 * @return The integer number of entries currently in the bag.
+							 */
+							public int getCurrentSize();
+
+							/**
+							 * Sees whether this bag is empty.
+							 *
+							 * @return True if the bag is empty, or false if not.
+							 */
+							public boolean isEmpty();
+
+							/**
+							 * Adds a new entry to this bag. No duplicates may be added to the bag!
+							 *
+							 * @param newEntry The object to be added as a new entry.
+							 * @return True if the addition is successful, or false if not.
+							 */
+							public boolean add(T newEntry);
+
+							/**
+							 * Removes one unspecified entry from this bag, if possible.
+							 *
+							 * @return Either the removed entry, if the removal. was successful, or
+							 * null.
+							 */
+							public T remove();
+
+							/**
+							 * Removes one occurrence of a given entry from this bag.
+							 *
+							 * @param anEntry The entry to be removed.
+							 * @return True if the removal was successful, or false if not.
+							 */
+							public boolean remove(T anEntry);
+
+							/**
+							 * Removes all entries from this bag.
+							 */
+							public void clear();
+
+							/**
+							 * Counts the number of times a given entry appears in this bag.
+							 *
+							 * @param anEntry The entry to be counted.
+							 * @return The number of times anEntry appears in the bag.
+							 */
+							public int getFrequencyOf(T anEntry);
+
+							/**
+							 * Tests whether this bag contains a given entry.
+							 *
+							 * @param anEntry The entry to locate.
+							 * @return True if the bag contains anEntry, or false if not.
+							 */
+							public boolean contains(T anEntry);
+
+							/**
+							 * Retrieves all entries that are in this bag.
+							 *
+							 * @return A newly allocated array of all the entries in the bag. Note: If
+							 * the bag is empty, the returned array is empty.
+							 */
+							public T[] toArray();
+
+							/**
+							 * Creates a new bag that combines the contents of this bag and anotherBag.
+							 *
+							 * @param anotherBag The bag that is to be added.
+							 * @return A combined bag.
+							 */
+							public BagInterface<T> union(BagInterface<T> anotherBag);
+							
+							/**
+							 * Creates a new bag that contains those objects that are present in both this bag
+							 * and anotherBag.
+							 *
+							 * @param anotherBag The bag that is to be compared.
+							 * @return A combined bag.
+							 */
+							public BagInterface<T> intersection(BagInterface<T> anotherBag);
+							/**
+							 * Creates a new bag of objects appeared in both bags.
+							 *
+							 * @param anotherBag The bag that is to be removed.
+							 * @return A combined bag.
+							 */
+							public BagInterface<T> difference(BagInterface<T> anotherBag);
+						} // end BagInterface
+						</script>
+					</section>
+					<section id="resizable-bags-array-bag">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">ResizableArrayBag File | Class</h2>
+						<p class="fifteen">This is the class file for a resizable bag using arrays. This implements the BagInterface interface.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						import java.util.ArrayList;
+						import java.util.Arrays;
+
+
+						/**
+						 * This is the class for the ArrayBag. It implements BagInterface
+						 * CSC 210 Data Structures Lab
+						 * September 26, 2018
+						 * @author Joseph Hentges
+						 */
+						public final class ResizableArrayBag<T> implements BagInterface<T>
+						{
+
+							private T[] bag; // Cannot be final due to doubling
+							private int numberOfEntries;
+							private boolean initialized = false;
+							private static final int DEFAULT_CAPACITY = 25; // Initial capacity of bag
+							private static final int MAX_CAPACITY = 10000;
+
+							/**
+							 * Creates an empty bag whose initial capacity is 25.
+							 */
+							public ResizableArrayBag()
+							{
+								this(DEFAULT_CAPACITY);
+							} // end default constructor
+
+							/**
+							 * Creates an empty bag having a given initial capacity.
+							 *
+							 * @param initialCapacity The integer capacity desired.
+							 */
+							public ResizableArrayBag(int initialCapacity)
+							{
+								checkCapacity(initialCapacity);
+
+								// The cast is safe because the new array contains null entries
+								@SuppressWarnings("unchecked")
+								T[] tempBag = (T[]) new Object[initialCapacity]; // Unchecked cast
+								bag = tempBag;
+								numberOfEntries = 0;
+								initialized = true;
+							} // end constructor
+
+							/**
+							 * Creates a bag containing given entries.
+							 *
+							 * @param contents An array of objects.
+							 */
+							public ResizableArrayBag(T[] contents)
+							{
+								//Create an arrayList to hold onto the values that are not duplicates of any other in the contents array
+								ArrayList<T> holdArrayList = new ArrayList<T>();
+								for(int i = 0; i < contents.length; i++)
+								{
+									//Check for duplicates
+									if(!holdArrayList.contains(contents[i]))
+									{
+										holdArrayList.add(contents[i]);
+									}
+								}
+								contents = (T[])holdArrayList.toArray(); //make contents equal the new values from holdArrayList
+								checkCapacity(contents.length);
+								bag = Arrays.copyOf(contents, contents.length);
+								numberOfEntries = contents.length;
+								initialized = true;
+							} // end constructor
+							
+							/**
+							 * Creates a new bag that combines the contents of this bag and anotherBag.
+							 * No duplicates
+							 * @param anotherBag The bag that is to be added.
+							 * @return A combined bag.
+							 */
+							public BagInterface<T> union(BagInterface<T> anotherBag)
+							{
+								//Check if the testBag is an instance of a ResizableArrayBag, if it's not return null
+								if(!(anotherBag instanceof ResizableArrayBag))
+								{
+								   return null;
+								}
+
+								//Create an set a max size. This is used in the for loop to determine how many times I need to run through the arrays
+								int maxSize = 0;
+								if(numberOfEntries > anotherBag.getCurrentSize())
+								{
+									maxSize = numberOfEntries;
+								}
+								else
+								{
+									maxSize = anotherBag.getCurrentSize();
+								}
+								
+								//Create a new bag to be returned with the correct values
+								BagInterface<T> unionBag = new ResizableArrayBag<>(); //create a new bag to be returned
+								
+								//Add all values from the two bags
+								//Don't add duplicates
+								for(int i = 0; i < maxSize; i++)
+								{
+									if(maxSize == numberOfEntries)
+									{
+										unionBag.add(bag[i]);
+										if(!unionBag.contains(anotherBag.toArray()[i]))
+										{
+											unionBag.add(anotherBag.toArray()[i]);
+										}
+									}
+									else
+									{
+										if(i < numberOfEntries)
+										{
+											unionBag.add(bag[i]);
+										}
+										if(!(unionBag.contains(anotherBag.toArray()[i])))
+										{
+											unionBag.add(anotherBag.toArray()[i]);
+										}
+									}
+								}
+								return unionBag;
+							}
+							
+							/**
+							 * Creates a new bag that contains those objects that are present in both this bag
+							 * and anotherBag.
+							 * @param anotherBag The bag that is to be compared.
+							 * @return A combined bag.
+							 */
+							public BagInterface<T> intersection(BagInterface<T> anotherBag)
+							{
+								//Check if the testBag is an instance of a ResizableArrayBag, if it's not return null
+								if(!(anotherBag instanceof ResizableArrayBag))
+								{
+								   return null;
+								}
+
+								//if both bags already contain the same values, just return anotherBag
+								if(bag.equals(anotherBag))
+								{
+									return anotherBag;
+								}
+
+								//A minSize used in a for loop below. Used to determine how many times I need to run through the arrays
+								int minSize = 0;
+								if(numberOfEntries < anotherBag.getCurrentSize())
+								{
+									minSize = numberOfEntries;
+								}
+								else
+								{
+									minSize = anotherBag.getCurrentSize();
+								}
+								
+								//Create a new bag to be returned with the correct values
+								BagInterface<T> intersectionBag = new ResizableArrayBag<>();
+								
+								//If each bag contains the same value, add it to the intersectionBag
+								for(int i = 0; i < minSize; i++)
+								{
+									if(anotherBag.contains(bag[i]))
+									{
+										intersectionBag.add(bag[i]);
+									} 
+								}
+								return intersectionBag;
+							}
+							
+							/**
+							 * Creates a new bag of objects appeared in both bags.
+							 * But are not shared by the both of them. 
+							 * @param anotherBag The bag that is to be removed.
+							 * @return A combined bag.
+							 */
+							public BagInterface<T> difference(BagInterface<T> anotherBag)
+							{
+								//Check if the testBag is an instance of a ResizableArrayBag, if it's not return null
+								if(!(anotherBag instanceof ResizableArrayBag))
+								{
+								   return null;
+								}
+
+								//Create an set a max size. This is used in the for loop to determine how many times I need to run through the arrays
+								int maxSize = 0;
+								if(numberOfEntries > anotherBag.getCurrentSize())
+								{
+									maxSize = numberOfEntries;
+								}
+								else
+								{
+									maxSize = anotherBag.getCurrentSize();
+								}
+								
+								//Create a new bag, to be returned with the correct values
+								BagInterface<T> differenceBag = new ResizableArrayBag<>();
+								
+								for(int i = 0; i < maxSize; i++)
+								{
+									if(maxSize == numberOfEntries)
+									{
+										if(!anotherBag.contains(bag[i]))
+										{
+											differenceBag.add(bag[i]);
+										}
+										if(i < anotherBag.getCurrentSize())
+										{
+											if(!this.contains(anotherBag.toArray()[i]))
+											{
+												differenceBag.add(anotherBag.toArray()[i]);
+											}
+										}
+									}
+									else
+									{
+										if(!this.contains(anotherBag.toArray()[i]))
+										{
+											differenceBag.add(anotherBag.toArray()[i]);
+										}  
+										if(i < numberOfEntries)
+										{
+											if(!anotherBag.contains(bag[i]))
+											{
+												differenceBag.add(bag[i]);
+											}
+										}
+									}
+								}
+								return differenceBag;
+							}
+							
+							/**
+							 * Test two bags to see if they contain the same values
+							 * @param testBag : BagInterface - A bag to be tested against the current bag
+							 * @return boolean - whether the two bags are equal
+							 */
+							public boolean equal(BagInterface<T> testBag)
+							{
+								//Check if the testBag is an instance of a ResizableArrayBag
+								if(!(testBag instanceof ResizableArrayBag))
+								{
+								   return false; 
+								}
+								//Check if the bags lenth are equal
+								if(!(bag.length == testBag.getCurrentSize()))
+								{
+									return false;
+								}
+								//Use a for loop to see if the testBag contains all values in the bag
+								for(int i = 0; i < numberOfEntries; i++)
+								{
+									//Return false if the bag does not contain a certain value
+									//Ex if the bag does not contain the value at bag[2], return false
+									if(!testBag.contains(bag[i]))
+									{
+										return false;
+									}
+								}
+								return true;
+							}
+							
+							/**
+							 * Used in the add() method. This tests the entry for duplicates in the bag.
+							 * return true if the entry does already appear in the bag, false if otherwise
+							 * @param newEntry : T - a possible entry to the bag
+							 * @return boolean - whether it is okay or not to add this entry to the bag
+							 */
+							public boolean checkDuplicate(T newEntry)
+							{
+								//For loop to run through all the values in bag. Checks for equal values
+								for(int i = 0; i < numberOfEntries; i++)
+								{
+									if(newEntry == bag[i])
+									{
+										return true;
+									}
+								}
+								return false;
+							}
+
+							/**
+							 * Adds a new entry to this bag.
+							 *
+							 * @param newEntry The object to be added as a new entry.
+							 * @return True.
+							 */
+							public boolean add(T newEntry)
+							{
+								checkInitialization();
+								if (isArrayFull())
+								{
+									doubleCapacity();
+								} // end if
+								
+								//Check if the newEntry is a duplicate of any other entry
+								if(checkDuplicate(newEntry))
+								{
+									return false;
+								}
+
+								bag[numberOfEntries] = newEntry;
+								numberOfEntries++;
+
+								return true;
+							} // end add
+
+							/**
+							 * Retrieves all entries that are in this bag.
+							 *
+							 * @return A newly allocated array of all the entries in this bag.
+							 */
+							public T[] toArray()
+							{
+								checkInitialization();
+
+								// The cast is safe because the new array contains null entries.
+								@SuppressWarnings("unchecked")
+								T[] result = (T[]) new Object[numberOfEntries]; // Unchecked cast
+								for (int index = 0; index < numberOfEntries; index++)
+								{
+									result[index] = bag[index];
+								} // end for
+
+								return result;
+							} // end toArray
+
+							/**
+							 * Sees whether this bag is empty.
+							 *
+							 * @return True if this bag is empty, or false if not.
+							 */
+							public boolean isEmpty()
+							{
+								return numberOfEntries == 0;
+							} // end isEmpty
+
+							/**
+							 * Gets the current number of entries in this bag.
+							 *
+							 * @return The integer number of entries currently in this bag.
+							 */
+							public int getCurrentSize()
+							{
+								return numberOfEntries;
+							} // end getCurrentSize
+
+							/**
+							 * Counts the number of times a given entry appears in this bag.
+							 *
+							 * @param anEntry The entry to be counted.
+							 * @return The number of times anEntry appears in this ba.
+							 */
+							public int getFrequencyOf(T anEntry)
+							{
+								checkInitialization();
+								int counter = 0;
+
+								for (int index = 0; index < numberOfEntries; index++)
+								{
+									if (anEntry.equals(bag[index]))
+									{
+										counter++;
+									} // end if
+								} // end for
+
+								return counter;
+							} // end getFrequencyOf
+
+							/**
+							 * Tests whether this bag contains a given entry.
+							 *
+							 * @param anEntry The entry to locate.
+							 * @return True if this bag contains anEntry, or false otherwise.
+							 */
+							public boolean contains(T anEntry)
+							{
+								checkInitialization();
+								return getIndexOf(anEntry) > -1; // or >= 0
+							} // end contains
+
+							/**
+							 * Removes all entries from this bag.
+							 */
+							public void clear()
+							{
+								while (!isEmpty())
+								{
+									remove();
+								}
+							} // end clear
+
+							/**
+							 * Removes one unspecified entry from this bag, if possible.
+							 *
+							 * @return Either the removed entry, if the removal was successful, or null.
+							 */
+							public T remove()
+							{
+								checkInitialization();
+								T result = removeEntry(numberOfEntries - 1);
+								return result;
+							} // end remove
+
+							/**
+							 * Removes one occurrence of a given entry from this bag.
+							 *
+							 * @param anEntry The entry to be removed.
+							 * @return True if the removal was successful, or false if not.
+							 */
+							public boolean remove(T anEntry)
+							{
+								checkInitialization();
+								int index = getIndexOf(anEntry);
+								T result = removeEntry(index);
+								return anEntry.equals(result);
+							} // end remove
+
+							// Locates a given entry within the array bag.
+							// Returns the index of the entry, if located,
+							// or -1 otherwise.
+							// Precondition: checkInitialization has been called.
+							private int getIndexOf(T anEntry)
+							{
+								int where = -1;
+								boolean found = false;
+								int index = 0;
+
+								while (!found && (index < numberOfEntries))
+								{
+									if (anEntry.equals(bag[index]))
+									{
+										found = true;
+										where = index;
+									} // end if
+									index++;
+								} // end while
+
+								// Assertion: If where > -1, anEntry is in the array bag, and it
+								// equals bag[where]; otherwise, anEntry is not in the array.
+								return where;
+							} // end getIndexOf
+
+							// Removes and returns the entry at a given index within the array.
+							// If no such entry exists, returns null.
+							// Precondition: 0 <= givenIndex < numberOfEntries.
+							// Precondition: checkInitialization has been called.
+							private T removeEntry(int givenIndex)
+							{
+								T result = null;
+
+								if (!isEmpty() && (givenIndex >= 0))
+								{
+									result = bag[givenIndex];          // Entry to remove
+									int lastIndex = numberOfEntries - 1;
+									bag[givenIndex] = bag[lastIndex];  // Replace entry to remove with last entry
+									bag[lastIndex] = null;             // Remove reference to last entry
+									numberOfEntries--;
+								} // end if
+
+								return result;
+							} // end removeEntry
+
+							// Returns true if the array bag is full, or false if not.
+							private boolean isArrayFull()
+							{
+								return numberOfEntries >= bag.length;
+							} // end isArrayFull
+
+							// Doubles the size of the array bag.
+							// Precondition: checkInitialization has been called.
+							private void doubleCapacity()
+							{
+								int newLength = 2 * bag.length;
+								checkCapacity(newLength);
+								bag = Arrays.copyOf(bag, newLength);
+							} // end doubleCapacity
+
+							// Throws an exception if the client requests a capacity that is too large.
+							private void checkCapacity(int capacity)
+							{
+								if (capacity > MAX_CAPACITY)
+								{
+									throw new IllegalStateException("Attempt to create a bag whose capacity exceeds "
+											+ "allowed maximum of " + MAX_CAPACITY);
+								}
+							} // end checkCapacity
+
+							// Throws an exception if receiving object is not initialized.
+							private void checkInitialization()
+							{
+								if (!initialized)
+								{
+									throw new SecurityException("Uninitialized object used "
+											+ "to call an ArrayBag method.");
+								}
+							} // end checkInitialization
+						} // end ResizableArrayBag
+						</script>
+					</section>
+		        </section>
+				
+				<section id="array-linked-list-lists">
+					<div class="content-header">
+		                <h1>Arrays & Linked Lists | Lists</h1>
+						</br>
+						<h3>Programming Language : Java</h3>
+                    </div>
+					<div class="welcome">                      
+                        <h2 class="twenty">Use Arrays or Linked Lists to Manipulate Lists</h2>
+						<p>This program shows the use of Arrays and Linked Lists to generate Lists.</p>
+                        <p>The List demonstrated here allows for only integers, however, lists allow for any data type if programmed to contain that data.</p>
+						<p>The Array and Linked List are two data structures created by me, however Java contains three built in data structures that may serve better in different environments. All five (two I built, and three built in) are demonstrated in the .zip file below.</p>
+		            </div>
+					<div class="welcome">       
+                        <h2 class="twenty">Files Used / Created</h2>
+                        <p>Download them below. Bold represents starting files, unbold: other files.</p>
+						<p>Download an example of speed testing between five different data structures. The unbold .zip file.</p>
+		            </div>
+					<div class="script-source">
+		                <ul>
+							<b><li><a href="project-files/page1/array-linked-list-lists/HentgesList.java" download>HentgesList.java</a></li></b>
+							<b><li><a href="project-files/page1/array-linked-list-lists/ArrayBasedList.java" download>ArrayBasedList.java</a></li></b>
+		                    <b><li><a href="project-files/page1/array-linked-list-lists/LinkBasedList.java" download>LinkBasedList.java</a></li></b>
+							<b><li><a href="project-files/page1/array-linked-list-lists/Driver.java" download>Driver.java</a></li></b>
+							<li><a href="project-files/page1/array-linked-list-lists/ExperimentingWithLists.zip" download>ExperimentingWithLists.zip</a></li>
+		                </ul>
+		            </div>
+					<section id="lists-list-interface">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">HentgesList File | Interface</h2>
+						<p class="fifteen">This is the interface for the lists. Methods/Functions are declared here, and will be called as abstract methods in class files.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						/**
+						 * This is the interface for Lists
+						 * CSC 210 Data Structures
+						 * Semester 1 | Fall 2018
+						 * September 24, 2018
+						 * @author Joseph Hentges
+						 */
+
+						/**
+						 * This is a NON-GENERIC interface
+						 */
+
+						public interface HentgesList {
+							
+							/**
+							 * Add item to the end of the list
+							 * @param item : int - item to be added
+							 * @return bool : boolean - true if add succeeded, false otherwise
+							 */
+							boolean add(int item);
+							
+							/**
+							 * Add an item to a particular position
+							 * @param pos : int - position for item to be added to | 1 as the front index
+							 * Any index lower than 0 will put the item at the front of the list
+							 * Any index greater than the current largest index will put the item at the end of the list
+							 * @param item : int - item to be added (int item)
+							 * @return bool : boolean - true if add succeeded, false otherwise
+							 */
+							boolean add(int pos, int item);
+							
+							/**
+							 * Remove item from a specific position
+							 * @param pos : int - position of the item to be removed
+							 * Zero and negative positions ill remove from the front
+							 * Positions larger than the current greatest will remove from the end
+							 * @return int - provide the removed item, null if the list is empty ... or returns -1 if the list is empty
+							 */
+							int remove(int pos);
+							
+							/**
+							 * Get item from a specific position
+							 * @param pos : int - position of the item to be removed
+							 * Zero and negative positions ill get from the front
+							 * Positions larger than the current greatest will get from the end
+							 * @return int - provide the gotten item, null if the list is empty ... or returns -1 if the list is empty
+							 */
+							int getEntryAt(int pos);
+							
+							/**
+							 * Clears the list of all values
+							 */
+							void clear();
+							
+							/**
+							 * Returns an array of all the items in the list
+							 * Preserves the order!
+							 * @return array : int[] - An array of the items in the list
+							 */
+							int[] toArray();
+							
+							/**
+							 * Checks if a given target is in the list
+							 * @param target : int - target to be found
+							 * @return bool : boolean - true if target is in the list, false otherwise
+							 */
+							boolean contains(int target);
+							
+							/**
+							 * How many items are in the list?
+							 * @return size : int - the number of items in the list
+							 */
+							int size();
+							
+							/**
+							 * Returns whether the list is empty or not
+							 * @return bool : boolean - True if the list is empty, false otherwise
+							 */
+							boolean isEmpty();
+						}
+						</script>
+					</section>
+					<section id="lists-array-based-list">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">ArrayBasedList File | Class</h2>
+						<p class="fifteen">This is the class file for a list using arrays. This implements the HentgesList interface.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						/**
+						 * This is the class for Lists | using Arrays
+						 * CSC 210 Data Structures
+						 * Semester 1 | Fall 2018
+						 * September 24, 2018
+						 * @author Joseph Hentges
+						 */
+
+						public class ArrayBasedList implements HentgesList {
+
+							private int items; //int to keep track of the items in the list
+							private int[] list; //an array to hold on to the values in the lsit
+							
+							/**
+							 * Constructor for list
+							 */
+							public ArrayBasedList()
+							{
+								items = 0;
+								list = new int[16]; //you can always increase the size of the array later, so pick a reasonable starting size
+							}
+							
+							/**
+							 * Return a string of all the values in the List
+							 */
+							public String toString()
+							{
+								String output = "Data in the List (" + size() + "):\n";
+								
+								for(int i = 0; i < items; i++)
+								{
+									output += "\t" + (i+1) + ":\t" + list[i] + "\n";
+								}
+								return output;
+							}
+							
+							/**
+							 * Increase the size of the list
+							 * make a bigger array for the list, while maintaining all values already in the list
+							 */
+							private void increaseList()
+							{
+								int[] tempArray = new int[list.length*2]; //give the list double the space
+								for(int i = 0; i < list.length; i++)
+								{
+									tempArray[i] = list[i];
+								}
+								list = tempArray;
+							}
+							
+							/**
+							 * Add item tot he end of the list
+							 * @param item : int - item to be added
+							 * @return bool : boolean - true if add succeeded, false otherwise
+							 */
+							@Override
+							public boolean add(int item) {
+								//catch if the list is full. give the list more space
+								if(items == list.length)
+								{
+									//need more space
+									increaseList();
+								}
+								
+								list[items] = item;
+								items++;
+								return true;
+							}
+
+							/**
+							 * Add an item to a particular position
+							 * @param item : int - item to be added (int item)
+							 * @return bool : boolean - true if add succeeded, false otherwise
+							 */
+							@Override
+							public boolean add(int pos, int item) {
+								//if the position given is greater than or equal to the current max
+								if(pos >= items)
+								{
+									//Add the the end of the array
+									add(item);
+								}
+								//add to the middle or front of the list
+								else
+								{
+									//catch if the list is full. give the list more space
+									if(items == list.length)
+									{
+										//need more space
+										increaseList();
+									}
+									//check for too low of a position
+									if(pos <= 0)
+									{
+										pos = 1;
+									}
+									//make room
+									for(int i = items; i > (pos-1); i--)
+									{
+										list[i] = list[i-1];
+									}
+									list[pos-1] = item;
+								}
+								items++;
+								return true;
+							}
+							
+							/**
+							 * Remove item from a specific position
+							 * @param pos : int - position of the item to be removed
+							 * @return int - provide the removed item, null if the list is empty ... or returns -1 if the list is empty
+							 */
+							@Override
+							public int remove(int pos) {
+								//If the list is empty, return nothing.
+								if(items <= 0)
+								{
+									return -1; //Return a default number, or could throw an exception
+								}
+								//If the position is less than or equal to 0, get the first element
+								else if(pos-1 <= 0)
+								{
+									pos = 1;
+								}
+								//If the position is larger than the number of items, get the last element
+								else if(pos > items)
+								{
+									pos = items;
+								}
+								
+								int temp = list[pos-1]; //temporary variable to hold the value at position 'pos'
+								
+								for(int i = pos-1; i < items; i++)
+								{
+									list[i] = list[i+1];
+								}
+								list[items-1] = 0; //removing the final element to account for moving every item down an index
+								items--;
+								
+								return temp;
+							}
+
+							/**
+							 * Get item from a specific position
+							 * @param pos : int - position of the item to be removed
+							 * Zero and negative positions ill get from the front
+							 * Positions larger than the current greatest will get from the end
+							 * @return int - provide the gotten item, null if the list is empty ... or returns -1 if the list is empty
+							 */
+							@Override
+							public int getEntryAt(int pos) {
+								//If the list is empty, return nothing.
+								if(items <= 0)
+								{
+									return -1; //Return a default number, or could throw an exception
+								}
+								//If the position is less than or equal to 0, get the first element
+								else if(pos-1 <= 0)
+								{
+									pos = 1;
+								}
+								//If the position is larger than the number of items, get the last element
+								else if(pos > items)
+								{
+									pos = items;
+								}
+								
+								return list[pos-1];
+							}
+
+							/**
+							 * Clears the list of all values
+							 */
+							@Override
+							public void clear() {     
+								System.out.println("...Clearing The List...");
+								for(int i = 0; i < items; i++)
+								{
+									list[i] = 0;
+								}
+								items = 0;
+							}
+
+							/**
+							 * Returns an array of all the items in the list
+							 * Preserves the order!
+							 * @return array : int[] - An array of the items in the list
+							 */
+							@Override
+							public int[] toArray() {
+								int[] temp = new int[items];
+								
+								for(int i = 0; i < items; i++)
+								{
+									temp[i] = list[i];
+								}
+								return temp;
+							}
+
+							/**
+							 * Checks if a given target is in the list
+							 * @param target : int - target to be found
+							 * @return bool : boolean - true if target is in the list, false otherwise
+							 */
+							@Override
+							public boolean contains(int target) {
+								//Loop through the array to see if something matches up with the target element
+								for(int i = 0; i < items; i++)
+								{
+									if(list[i] == target)
+									{
+										return true;
+									}
+								}
+								return false;
+							}
+
+							/**
+							 * How many items are in the list?
+							 * @return items : int - the number of items in the list
+							 */
+							@Override
+							public int size() {
+								return items;
+							}
+
+							/**
+							 * Returns whether the list is empty or not
+							 * @return bool : boolean - True if the list is empty, false otherwise
+							 */
+							@Override
+							public boolean isEmpty() {
+								return items <= 0;
+							}
+							
+						}
+						</script>
+					</section>
+					<section id="lists-link-based-list">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">LinkBasedList File | Class</h2>
+						<p class="fifteen">This is the class file for a list using linked lists. This implements the HentgesList interface.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						/**
+						 * This is the class for Lists | using Linked Lists
+						 * CSC 210 Data Structures
+						 * Semester 1 | Fall 2018
+						 * September 24, 2018
+						 * @author Joseph Hentges
+						 */
+
+						public class LinkBasedList implements HentgesList{
+							
+							//Variables used in the LinkedList
+							private int items;
+							private Node front;
+							
+							//Create a Node class
+							private class Node
+							{
+								int data;
+								Node next;
+							}
+							
+							//Constructor for the linked list
+							public LinkBasedList()
+							{
+								items = 0;
+								front = null;
+							}
+							
+							/**
+							 * Return a string of all the values in the List
+							 */
+							public String toString()
+							{        
+								String output = "Data in the List (" + size() + "):\n";
+								Node curr = front; //pointer for the nodes
+								int i = 1;
+								while(curr != null)
+								{
+									output += "\t" + (i) + ":\t" + curr.data + "\n";
+									i++;
+									curr = curr.next;
+								}
+								return output;
+							}
+
+							/**
+							 * Add item to the end of the list
+							 * @param item : int - item to be added
+							 * @return bool : boolean - true if add succeeded, false otherwise
+							 */
+							@Override
+							public boolean add(int item) {
+								//Find the end of the list
+								//Do we have a list?
+								if(front == null)
+								{
+									Node newNode = new Node();
+									newNode.data = item;
+									newNode.next = null;
+									front = newNode;
+									items++;
+									return true;
+								}
+								//If the list is not empty
+								//Need to find the end of the list
+								Node curr = front;
+								while(curr.next != null)
+								{
+									curr = curr.next;
+								}
+								Node newNode = new Node();
+								newNode.data = item;
+								newNode.next = null;
+								curr.next = newNode;
+								items++;
+								return true;
+							}
+
+							/**
+							 * Add an item to a particular position
+							 * @param pos : int - position for item to be added to | 1 as the front index
+							 * Any index lower than 0 will put the item at the front of the list
+							 * Any index greater than the current largest index will put the item at the end of the list
+							 * @param item : int - item to be added (int item)
+							 * @return bool : boolean - true if add succeeded, false otherwise
+							 */
+							@Override
+							public boolean add(int pos, int item) {
+								//add to the end of the list
+								if(pos >= items)
+								{
+									add(item);
+								}
+								//add to the middle or front of the list
+								//if the position is less than or equal to 1, put it at the beggining of the list
+								else if(pos <= 1)
+								{
+									//Add to the front
+									Node newNode = new Node();
+									newNode.data = item;
+									newNode.next = front;
+									front = newNode;
+									items++;
+								}
+								//if the position is in the middle of the list
+								else
+								{
+									//Get to the location
+									Node curr = front;
+									for(int i = 1; i < pos-1; i++)
+									{
+										curr = curr.next;
+									}
+									//Curr is before hte new node position
+									Node newNode = new Node();
+									newNode.data = item;
+									newNode.next = curr.next;
+									curr.next = newNode;
+									items++;
+								}
+								return true;
+							}
+
+							/**
+							 * Remove item from a specific position
+							 * @param pos : int - position of the item to be removed
+							 * Zero and negative positions ill remove from the front
+							 * Positions larger than the current greatest will remove from the end
+							 * @return int - provide the removed item, null if the list is empty ... or returns -1 if the list is empty
+							 */
+							@Override
+							public int remove(int pos) {
+								//If the list is empty, just throw out a default value or exception
+								if(items <= 0)
+								{
+									return -1; //default value in this case
+								}
+								//get at the end of the list
+								else if(pos >= items)
+								{
+									pos = items;
+								}
+								//get at the middle or front of the list
+								//if the position is less than or equal to 1, put it at the beggining of the list
+								else if(pos <= 1)
+								{
+									//point to the front of the list
+									pos = 1;
+								}
+								//Special case. If the position is the front node. Remove & return the front value
+								if(pos == 1)
+								{
+									int temp = front.data;
+									front = front.next;
+									items--;
+									return temp;
+								}
+								//If the position is not the front node
+								//Get to the location. Go to 1 postion BEFORE target position
+								Node curr = front;
+								for(int i = 1; i < pos - 1; i++)
+								{
+									curr = curr.next;
+								}
+								//curr is at the node before target position
+								int temp = curr.next.data;
+								curr.next = curr.next.next;
+								items--;
+								return temp;
+							}
+
+							/**
+							 * Get item from a specific position
+							 * @param pos : int - position of the item to be removed
+							 * Zero and negative positions ill get from the front
+							 * Positions larger than the current greatest will get from the end
+							 * @return int - provide the gotten item, null if the list is empty ... or returns -1 if the list is empty
+							 */
+							@Override
+							public int getEntryAt(int pos) {
+								//If the list is empty, just throw out a default value or exception
+								if(items <= 0)
+								{
+									return -1; //default value in this case
+								}
+								//get at the end of the list
+								else if(pos >= items)
+								{
+									pos = items;
+								}
+								//get at the middle or front of the list
+								//if the position is less than or equal to 1, put it at the beggining of the list
+								else if(pos <= 1)
+								{
+									//point to the front of the list
+									pos = 1;
+								}
+								//Everything is in order. Now find the value
+								//Have a valid position
+								//Get to the location
+								Node curr = front;
+								for(int i = 1; i < pos; i++)
+								{
+									curr = curr.next;
+								}
+								//Curr is at the target position
+								return curr.data;
+							}
+
+							/**
+							 * Clears the list of all values
+							 */
+							@Override
+							public void clear() {
+								items = 0;
+								front = null; //By setting front to null, nothing is pointing to the front of the list, therefore java will clear everything in memory.
+							}
+
+							/**
+							 * Returns an array of all the items in the list
+							 * Preserves the order!
+							 * @return array : int[] - An array of the items in the list
+							 */
+							@Override
+							public int[] toArray() {
+								int[] output = new int[items]; //array to be returned. Will contain the data in each node
+								Node curr = front;
+								int i = 0;
+								while(curr != null)
+								{
+									output[i] = curr.data;
+									curr = curr.next;
+									i++;
+								}
+								return output;
+							}
+
+							/**
+							 * Checks if a given target is in the list
+							 * @param target : int - target to be found
+							 * @return bool : boolean - true if target is in the list, false otherwise
+							 */
+							@Override
+							public boolean contains(int target) {
+								Node curr = front;
+								while(curr != null)
+								{
+									if(curr.data == target)
+									{
+										return true;
+									}
+									curr = curr.next;
+								}
+								return false;
+							}
+
+							/**
+							 * How many items are in the list?
+							 * @return size : int - the number of items in the list
+							 */
+							@Override
+							public int size() {
+								return items;
+							}
+
+							/**
+							 * Returns whether the list is empty or not
+							 * @return bool : boolean - True if the list is empty, false otherwise
+							 */
+							@Override
+							public boolean isEmpty() {
+								return items <= 0;
+							}
+							
+						}
+						</script>
+					</section>
+		        </section>			
+
+		        
+		        <section id="end">
+					<div class="content-header">
+		                <a class="dead-arrow" href="#"><i class="fa fa-arrow-left"></i></a>
+						<u><a class="" href="#">1</a></u>
+						<u><a class="not-page" href="projects-2">2</a></u>
+						<a class="" href="projects-2"><i class="fa fa-arrow-right"></i></a>
+                    </div>
+		        </section>
+		    </div>
+		</div>
+		
+		
+		<!-- Essential JavaScript Libraries
+		==============================================-->
+        <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.nav.js"></script>
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shCore.js"></script> 
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shBrushXml.js"></script> 
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shBrushCss.js"></script> 
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shBrushJScript.js"></script> 
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shBrushPhp.js"></script> 
+        <script type="text/javascript">
+            SyntaxHighlighter.all()
+        </script>
+        <script type="text/javascript" src="../js/custom.js"></script>
+		
+    </body>
+</html>

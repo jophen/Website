@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="blank">
+    <meta name="keywords" content="manage, events, event manager, calender mobile, app, mobile app, iphone, android, free, subcription">
+    <meta name="author" content="Joseph Hentges">
+    <title>Firebase HTML Register</title>
+    <link href="img/icon.png" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="loginStyle.css">
+	
+	<script src="firebase given url code"></script>
+	<script>
+		// Initialize Firebase
+		// All given by Firebase Account
+		var config = {
+			apiKey: "",
+			authDomain: "",
+			databaseURL: "",
+			projectId: "",
+			storageBucket: "",
+			messagingSenderId: ""
+	    };
+	    firebase.initializeApp(config);
+	</script>
+  </head>
+
+  <body id="top">
+    <div class="login-page">
+      <div class="form">
+        <div class="login-form">
+			
+		  <p id="error" style="font-size:15px; color:#FF3C3C"><p>
+          <input type="text" style="text-align:center" placeholder="email address" id="txtEmail"/>
+			
+          <input type="password" style="text-align:center" placeholder="password" id="txtPassword"/>
+			
+          <input type="password" style="text-align:center" placeholder="verify password" id="txtVerifyPassword"/>
+
+          <button id="btnSignup">create</button>
+
+          <p style="font-size:15px" class="message">Already registered? <a href="login.html">Sign In</a></p>
+
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+  
+  <script>
+	var txtEmail = document.getElementById("txtEmail");
+	var txtPassword = document.getElementById("txtPassword");
+	var txtVerifyPassword = document.getElementById("txtVerifyPassword");
+	var btnSignup = document.getElementById("btnSignup");
+	
+	btnSignup.addEventListener("click", function()
+	{	
+		var error = document.getElementById("error").innerHTML = "";
+		var errors = 0;
+		
+		//Get the values from the elements
+		const email = txtEmail.value;
+		const password = txtPassword.value;
+		const verifyPassword = txtVerifyPassword.value;
+		const auth = firebase.auth(); //Call Firebase
+		
+		//Check if the passwords entered (password and varifyPassword) are equal
+		if(password != verifyPassword)
+		{
+			var error = document.getElementById("error");
+			if(errors >= 1)
+			{
+				error.innerHTML += "<br/>Password are not the same";
+			}else {
+				error.innerHTML += "Password are not the same";
+			}
+			return;
+		}
+		
+		if(email.length == 0)
+		{
+			var error = document.getElementById("error");
+			if(errors >= 1)
+			{
+				error.innerHTML += "<br/>Email field is not filled";
+			}else {
+				error.innerHTML += "Email field is not filled";
+			}
+			return;
+		}
+		
+		//If everything passes - create the user with the email and password entered by the user
+		//Check for errors, alert the user of them, and return
+		var errorCheck = false;
+		var errorCode;
+		const promise = auth.createUserWithEmailAndPassword(email, password);
+		promise
+			.catch(error => {
+				errorCode = error.code;
+				errorCheck = true;
+				
+				if(errorCheck)
+				{
+					if(errorCode == "auth/email-already-in-use")
+					{
+						var error = document.getElementById("error");
+						if(errors >= 1)
+						{
+							error.innerHTML += "<br/>Email is already in use";
+						}else {
+							error.innerHTML += "Email is already in use";
+						}
+						return;
+					} else if(errorCode == "auth/weak-password")
+					{
+						var error = document.getElementById("error");
+						if(errors >= 1)
+						{
+							error.innerHTML += "<br/>Password is too weak, must be 6 characters long";
+						}else {
+							error.innerHTML += "Password is too weak, must be 6 characters long";
+						}
+						return;
+					} else if(errorCode == "auth/invalid-email")
+					{
+						var error = document.getElementById("error");
+						if(errors >= 1)
+						{
+							error.innerHTML += "<br/>Email is invalid";
+						}else {
+							error.innerHTML += "Email is invalid";
+						}
+						return;
+					} else
+					{
+						console.log(errorCode);
+					}	
+				}
+			});
+		promise
+			.then(moveon());
+			
+		function moveon()
+		{
+			window.open("login.html","_self");
+		}
+	});
+  </script>
+</html>
