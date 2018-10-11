@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Undergraduate</title>
+		<link href="../img/SCM_logo.png" rel="icon" type="image/x-icon" 
+        <meta name="description" content="">
+		<!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- <link rel="shortcut icon" href="img/favicon.png"> -->
+        
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet'>
+        
+        <!-- Syntax Highlighter -->
+        <link rel="stylesheet" type="text/css" href="../syntax-highlighter/styles/shCore.css" media="all">
+        <link rel="stylesheet" type="text/css" href="../syntax-highlighter/styles/shThemeDefault.css" media="all">
+		
+		<!-- Font Awesome CSS-->
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <!-- Normalize/Reset CSS-->
+		<link rel="stylesheet" href="../css/normalize.min.css">
+		<!-- Main CSS-->
+        <link rel="stylesheet" href="../css/main.css">
+		
+    </head>
+	
+    <body id="welcome">
+    
+        <aside class="left-sidebar">
+            <div class="logo">
+                <a href="#welcome">
+                    <img src="../img/SCM_logo.png" alt="">
+                </a>
+            </div>
+            <nav class="left-nav">
+                <ul id="nav">
+                    <li class="current"><a href="#welcome">Welcome</a></li>
+					<li><a href="#recursive-linked-lists">Recursive Linked Lists</a></li>
+					<li><a class="indent" href="#recursive-linked-lists-double-linked">Recursive Double Linked List</a></li>
+					<li><a class="indent" href="#recursive-linked-lists-circular-linked">Recursive Circular Linked List</a></li>
+					<li><a class="indent" href="#recursive-linked-lists-circular-double-linked">Recursive Circular Double Linked List</a></li>
+                </ul>
+            </nav>
+        </aside>
+		
+		<div id="main-wrapper">
+		    <div class="main-content">
+		        <section id="welcome">
+		            <div class="content-header">
+		                <h1 class="big-title">Undergraduate Projects</h1>
+						</br>
+						<u><a target="_blank" href="university-undergraduate-contents.pdf"><h3>Click to View Table of Contents</h3></a></u>
+						</br>
+						<a class="" href="projects-1"><i class="fa fa-arrow-left"></i></a>
+						<u><a class="not-page" href="projects-1">1</a></u>
+						<u><a class="not-page" href="projects-2">2</a></u>
+						<u><a class="" href="#">3</a></u>
+						<a class="dead-arrow" href="#"><i class="fa fa-arrow-right"></i></a>
+		            </div>
+		            <div class="welcome">
+                        
+                        <h2 class="twenty">Assignments and Projects from My Undergraduate</h2>
+						
+						<p>Assignments and projects I felt were worth documenting/saving for the future. These aren't necessarily large or particularly important, but they show useful techniques or functions.</p>
+
+                        <p>Some sections show whole programs or files, while other show only functions/methods that can be used in any program.</p>
+						
+						<p>I mark what programming language I use in each project as well.</p>
+		            </div>
+		            
+		            <div class="features">
+		                <h2 class="twenty">This Page Features</h2>
+		                
+		                <ul>
+                            <li>Recursive Linked Lists</li>
+		                </ul>
+		            </div>
+
+		        </section>	        
+				
+				<section id="recursive-linked-lists">
+					<div class="content-header">
+		                <h1>Recursive Linked Lists</h1>
+						</br>
+						<h3>Programming Language : Java</h3>
+                    </div>
+					<div class="welcome">                      
+                        <h2 class="twenty">Create and Manipulate Linked Lists Using Recursion</h2>
+						<p>This program shows the use of a sorting algorithm called Heap Sort.</p>
+                        <p>The algorithm sorts an array of values from smallest to largest in place (sorting the array without creating additional arrays).</p>
+		            </div>					
+					<div class="welcome">       
+                        <h2 class="twenty">Files Used / Created</h2>
+                        <p>Download them below. Bold represents class files, unbold: interface or driver files.</p>
+						<p>The Driver.java file shows examples of each method in the linked lists being used.</p>
+		            </div>
+					<div class="script-source">
+		                <ul>
+		                    <b><li><a href="project-files/page3/recursive-linked-lists/DoubleLinkedList.java" download>DoubleLinkedList.java</a></li></b>
+							<b><li><a href="project-files/page3/recursive-linked-lists/CircularLinkedList.java" download>CircularLinkedList.java</a></li></b>
+							<b><li><a href="project-files/page3/recursive-linked-lists/CircularDoubleLinkedList.java" download>CircularDoubleLinkedList.java</a></li></b>
+							<li><a href="project-files/page3/recursive-linked-lists/ListInterface.java" download>ListInterface.java</a></li>
+							<li><a href="project-files/page3/recursive-linked-lists/Driver.java" download>Driver.java</a></li>
+		                </ul>
+		            </div>
+					<h2 class="title">ListInterface File</h2>
+					<p class="fifteen">This is the Interface file for all of the linked lists displayed. It documents the methods that the lists will use.</p>
+					<script type="syntaxhighlighter" class="brush: js">
+					/**
+					 * This is the interface for the Linked Lists using recursion
+					 * CSC 210L Data Structures Lab
+					 * Lab #5 - Recursive Linked Lists
+					 * Semester 1 | Fall 2018
+					 * October 10, 2018
+					 * @author Joseph Hentges
+					 */
+
+					public interface ListInterface<T>
+					{
+					   /** Adds a new entry to the end of this list.
+						   Entries currently in the list are unaffected.
+						   The list's size is increased by 1.
+						   @param newEntry  The object to be added as a new entry. */
+					   public void add(T newEntry);
+					   
+					   /** Adds a new entry at a specified position within this list.
+						   Entries originally at and above the specified position
+						   are at the next higher position within the list.
+						   The list's size is increased by 1.
+						   @param newPosition  An integer that specifies the desired
+											   position of the new entry.
+						   @param newEntry     The object to be added as a new entry.
+						   @throws  IndexOutOfBoundsException if either
+									newPosition < 1 or newPosition > getLength() + 1. */
+					   public void add(int newPosition, T newEntry);
+					   
+					   /** Removes the entry at a given position from this list.
+						   Entries originally at positions higher than the given
+						   position are at the next lower position within the list,
+						   and the list's size is decreased by 1.
+						   @param givenPosition  An integer that indicates the position of
+												 the entry to be removed.
+						   @return  A reference to the removed entry.
+						   @throws  IndexOutOfBoundsException if either 
+									givenPosition < 1 or givenPosition > getLength(). */
+					   public T remove(int givenPosition);
+					   
+					   /** Removes all entries from this list. */
+					   public void clear();
+					   
+					   /** Replaces the entry at a given position in this list.
+						   @param givenPosition  An integer that indicates the position of
+												 the entry to be replaced.
+						   @param newEntry  The object that will replace the entry at the
+											position givenPosition.
+						   @return  The original entry that was replaced.
+						   @throws  IndexOutOfBoundsException if either
+									givenPosition < 1 or givenPosition > getLength(). */
+					   public T replace(int givenPosition, T newEntry);
+					   
+					   /** Retrieves the entry at a given position in this list.
+						   @param givenPosition  An integer that indicates the position of
+												 the desired entry.
+						   @return  A reference to the indicated entry.
+						   @throws  IndexOutOfBoundsException if either
+									givenPosition < 1 or givenPosition > getLength(). */
+					   public T getEntry(int givenPosition);
+					   
+					   /** Retrieves all entries that are in this list in the order in which
+						   they occur in the list.
+						   @return  A newly allocated array of all the entries in the list.
+									If the list is empty, the returned array is empty. */
+					   public T[] toArray();
+					   
+					   /** Sees whether this list contains a given entry.
+						   @param anEntry  The object that is the desired entry.
+						   @return  True if the list contains anEntry, or false if not. */
+					   public boolean contains(T anEntry);
+					   
+					   /** Gets the length of this list.
+						   @return  The integer number of entries currently in the list. */
+					   public int getLength();
+						   
+					   /** Sees whether this list is empty.
+						   @return  True if the list is empty, or false if not. */
+					   public boolean isEmpty();
+					   
+					   /**
+						* Get values starting from the end of the list.
+						* Will only be used in double linked lists types.
+						*/
+					   public void valuesFromEnd();
+					   
+					   /**
+						* Get values in a circle. Runs through the list multiple times over.
+						* This shows the list is connected from front to back.
+						* Only used in circular linked lists types.
+						*/
+					   public void valuesInACircle();
+					}
+					</script>
+					<section id="recursive-linked-lists-double-linked">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">DoubleLinkedList File</h2>
+						<p class="fifteen">This is the class file for a Double Linked List. It creates a double linked list with nodes, and manipulates it using Recursion. Each node has a NEXT node and LAST node pointer.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						/**
+						 * This is the class file for a Double Linked List using recursion
+						 * CSC 210L Data Structures Lab
+						 * Lab #5 - Recursive Linked Lists
+						 * Semester 1 | Fall 2018
+						 * October 10, 2018
+						 * @author Joseph Hentges
+						 */
+
+						public class DoubleLinkedList<T> implements ListInterface<T> {
+							
+							private Node firstNode;            // Reference to first node of chain
+							private int numberOfEntries;
+
+							/**
+							 * Traverse the list to a given position.
+							 * @param current : Node - The node the traverse method is currently on
+							 * @param position : int - The position number (index) the traverse is currently on
+							 * @return Node - A node that the traverse method moves to
+							 */
+							public Node traverse(Node current, int position)
+							{        
+								if(position <= 1)
+								{
+									return current;
+								}
+								if(position > numberOfEntries)
+								{
+									position = numberOfEntries;
+								}
+								return traverse(current.getNextNode(), position-1);
+								
+							}
+							
+							/**
+							 * Add item to the end of the list
+							 * @param newEntry : T - item to be added
+							 */
+							@Override
+							public void add(T newEntry) {
+								//If the list is not empty
+								//Need to find the end of the list
+								Node newNode = new Node(newEntry);
+								
+								//If the list is empty set the first node pointer to this node
+								if(numberOfEntries == 0)
+								{
+									firstNode = newNode;
+								}
+								else
+								{
+									Node lastNode = traverse(firstNode, numberOfEntries);
+									newNode.setLastNode(lastNode);
+									lastNode.setNextNode(newNode);           
+								}
+								numberOfEntries++;
+							}
+
+							/**
+							 * Given a position, add the element to somewhere in the list
+							 * @param newPosition : int - a given position
+							 * @param newEntry : T - Some given data
+							 */
+							@Override
+							public void add(int newPosition, T newEntry) {
+								Node newNode = new Node(newEntry);
+								
+								if(newPosition > numberOfEntries)
+								{
+									add(newEntry);
+									return;
+								}
+								if(newPosition <= 1) //Add to the beggining of the list
+								{
+									Node nodeTemp = firstNode;
+									newNode.setNextNode(firstNode);
+									firstNode = newNode;
+									nodeTemp.setLastNode(firstNode);
+								}
+								else //Add the node to some place at the beginning or end of the list
+								{
+									Node lastNode = traverse(firstNode, newPosition-1);
+									newNode.setLastNode(lastNode);
+									newNode.setNextNode(lastNode.getNextNode());
+									lastNode.setNextNode(newNode);
+									newNode.getNextNode().setLastNode(newNode);
+								}
+								numberOfEntries++;
+							}
+
+							/**
+							 * Remove the node at a given posiiton, and return its data
+							 * @param givenPosition : int - The given position to have its node removed
+							 * @return T : data - The data at the given position
+							 */
+							@Override
+							public T remove(int givenPosition) {
+								T data;
+								//Check and set position entry
+								if(givenPosition >= numberOfEntries)
+								{
+									givenPosition = numberOfEntries;
+								}
+								if(givenPosition <= 1)
+								{
+									data = firstNode.getData();
+									firstNode = firstNode.getNextNode();
+									firstNode.setLastNode(null);
+									numberOfEntries--;
+									return data;
+								}
+								Node theNode = traverse(firstNode, givenPosition); //Traverse to the node to be removed and returned
+								Node nextNode = theNode.getNextNode();
+								Node lastNode = theNode.getLastNode();
+								data = theNode.getData();
+								lastNode.setNextNode(nextNode);
+								//Check to make sure nextNode is not null, will error if it tries to set the next node's last
+								if(nextNode != null)
+									nextNode.setLastNode(lastNode);
+								numberOfEntries--;
+								return data;
+							}
+
+							/**
+							 * reset the list, clear of all nodes and set numberOfEntries to 0
+							 */
+							@Override
+							public void clear() {
+								initializeDataFields(); //call the methods that resets the list, and sets everything to 0
+							}
+
+							/**
+							 * Replace the data at a given position
+							 * @param givenPosition : int - given position
+							 * @param newEntry : T - Data to be changed to in the given poistions node
+							 * @return dataHold : T - The data originally in the node
+							 */
+							@Override
+							public T replace(int givenPosition, T newEntry) {
+								T dataHold;
+								//Set the givenPosition if outside the list boundries
+								if(givenPosition > numberOfEntries) //get the node's data
+								{
+									Node original = traverse(firstNode, numberOfEntries); //the node originally in the given position
+									dataHold = original.getData();
+									original.setData(newEntry);
+								}
+								if(givenPosition <= 1) //get first nodes data
+								{
+									 dataHold = firstNode.getData();
+									 firstNode.setData(newEntry);
+								}
+								else //get somewhere in the middle of the lists data
+								{
+									Node original = traverse(firstNode, givenPosition); //the node originally in the given position
+									dataHold = original.getData();
+									original.setData(newEntry);
+								}
+								return dataHold;
+							}
+
+							/**
+							 * Get the data of a node in a given position in the list
+							 * @param givenPosition : int - index in the list
+							 * @return data - data from the node of the given position in the list
+							 */
+							@Override
+							public T getEntry(int givenPosition) {
+								//Set the givenPosition if outside the list boundries
+								if(givenPosition > numberOfEntries) //get the node's data
+								{
+									return traverse(firstNode, numberOfEntries).getData();
+								}
+								if(givenPosition <= 1) //get first nodes data
+								{
+									return firstNode.getData();
+								}
+								else //get somewhere in the middle of the lists data
+								{
+									return traverse(firstNode, givenPosition).getData();
+								}
+							}
+
+							/**
+							 * Get an array of the elements from the list
+							 * @return output : T[] - an array of all the elements in the list
+							 */
+							@Override
+							public T[] toArray() {
+								T[] output = (T[]) new Object[numberOfEntries]; //array to be returned. Will contain the data in each node      
+								
+								int index = 0;
+								Node currentNode = firstNode;
+								output = copy(output, currentNode, index);
+								
+								return output;
+							}
+							
+							/**
+							 * This method recursively copies data from the linked list to an Array
+							 * @param newArray Array which will eventually contain the elements in the list
+							 * @param curr Node pointing to the current spot in the list
+							 * @param index value for where we are in the list
+							 * @return The updated array which now contains all the elements in the list
+							 */
+							private T[] copy(T[] newArray, Node current, int index)
+							{
+								if (index == numberOfEntries)
+								{
+									return newArray;
+								}
+								
+								newArray = copy(newArray, current.getNextNode(), index + 1);
+								newArray[index] = current.getData();
+								return newArray;
+							}
+
+							/**
+							 * Determine whether the list contains certain data
+							 * @param anEntry : Node - data to be found the in the list
+							 * @return found : boolean - whether the list contains certain data or not.
+							 */
+							@Override
+							public boolean contains(T anEntry) {
+								boolean found = false;
+								Node currentNode = firstNode;
+
+								if (find(anEntry, currentNode) != null)
+									found = true;
+								
+								return found;
+							}
+							
+							/**
+							 * Recursively find a given data entry
+							 * @param entry Data to find
+							 * @param curr Current node to look at
+							 * @return the Data we found (or a null if not found)
+							 */
+							private T find(T entry, Node curr)
+							{
+								if (curr == null)
+									return null;
+								
+								if (entry.equals(curr.getData()))
+									return curr.getData();
+								
+								return find(entry,curr.getNextNode());
+							}
+
+							/**
+							 * Return the size of the list
+							 * @return the size of the list
+							 */
+							@Override
+							public int getLength() {
+								return numberOfEntries;
+							}
+
+							/**
+							 * Return whether the list is empty or not.
+							 * @return result : boolean - whether the list is empty or not 
+							 */
+							@Override
+							public boolean isEmpty() {
+								boolean result = false;
+
+								if (numberOfEntries == 0) // Or getLength() == 0
+								{
+									result = true;
+								}
+
+								return result;
+							}
+
+							/**
+							 * Unused in this class
+							 * Only used in circular linked lists
+							 */
+							@Override
+							public void valuesInACircle() {
+								System.out.println("NOT USED IN THIS TYPE OF LIST");
+							}
+							
+							/**
+							 * This is the constructor for a Node.
+							 * It contains the node getter and setters for its variables (data, next and last)
+							 */
+							private class Node
+							{
+
+								private T data; // Entry in list
+								private Node next; // Link to next node
+								private Node last;
+
+								private Node(T dataPortion)
+								{
+									data = dataPortion;
+									next = null;
+									last = null;
+								} // end constructor
+
+								private Node(T dataPortion, Node nextNode, Node lastNode)
+								{
+									data = dataPortion;
+									next = nextNode;
+									last = lastNode;
+								}
+
+								private T getData()
+								{
+									return data;
+								} 
+
+								private void setData(T newData)
+								{
+									data = newData;
+								}
+
+								private Node getNextNode()
+								{
+									return next;
+								}
+
+								private void setNextNode(Node nextNode)
+								{
+									next = nextNode;
+								}
+								
+								private Node getLastNode()
+								{
+									return last;
+								}
+								
+								private void setLastNode(Node lastNode)
+								{
+									last = lastNode;
+								}
+							} 
+							
+							/**
+							 * Initializes the class data fields to indicate an empty list.
+							 */
+							private void initializeDataFields()
+							{
+								firstNode = null;
+								numberOfEntries = 0;
+							} // end initializeDataFields
+							
+							/**
+							 * Go to the last node/element in the list, and read there data backwards.
+							 * This shows the list is double linked.
+							 * Non-Recursive since it is only used for testing
+							 */
+							@Override
+							public void valuesFromEnd()
+							{
+								System.out.println("The number of elements: " + numberOfEntries);
+								Node curr = firstNode;
+								for(int i = 0; i < numberOfEntries-1; i++)
+								{
+									curr = curr.getNextNode();
+								}
+								System.out.println("The list is currently on the last item. Item data: " + curr.getData());
+								System.out.println("Going backwards in the list now...");
+								for(int i = 0; i < numberOfEntries; i++)
+								{
+									System.out.println("Current item data: " + curr.getData());
+									curr = curr.getLastNode();
+								}
+							} 
+						}
+						</script>
+					</section>
+					<section id="recursive-linked-lists-circular-linked">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">CircularLinkedList File</h2>
+						<p class="fifteen">This is the class file for a Circular Linked List. It creates a circular linked list with nodes, and manipulates it using Recursion. Each node has a NEXT node pointer, and the last node in the list points to the first node in the list.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						/**
+						 * This is the class file for a Circular Linked List using recursion
+						 * CSC 210L Data Structures Lab
+						 * Lab #5 - Recursive Linked Lists
+						 * Semester 1 | Fall 2018
+						 * October 10, 2018
+						 * @author Joseph Hentges
+						 */
+
+						public class CircularLinkedList<T> implements ListInterface<T> {
+							
+							private Node firstNode;            // Reference to first node of chain
+							private int numberOfEntries;
+
+							/**
+							 * Traverse the list to a given position.
+							 * @param current : Node - The node the traverse method is currently on
+							 * @param position : int - The position number (index) the traverse is currently on
+							 * @return Node - A node that the traverse method moves to
+							 */
+							public Node traverse(Node current, int position)
+							{        
+								if(position <= 1)
+								{
+									return current;
+								}
+								if(position > numberOfEntries)
+								{
+									position = numberOfEntries;
+								}
+								return traverse(current.getNextNode(), position-1);
+								
+							}
+							
+							/**
+							 * Add item to the end of the list
+							 * @param newEntry : T - item to be added
+							 */
+							@Override
+							public void add(T newEntry) {
+								Node newNode = new Node(newEntry);
+								
+								//If the list is empty set the first node pointer to this node
+								if(numberOfEntries == 0)
+								{
+									firstNode = newNode;
+								}
+								else
+								{
+									Node lastNode = traverse(firstNode, numberOfEntries); //Get the last node in the list
+									lastNode.setNextNode(newNode); //have the last node point to the new node
+								}
+								numberOfEntries++;
+							}
+
+							/**
+							 * Given a position, add the element to somewhere in the list
+							 * @param newPosition : int - a given position
+							 * @param newEntry : T - Some given data
+							 */
+							@Override
+							public void add(int newPosition, T newEntry) {
+								Node newNode = new Node(newEntry);
+								
+								if(newPosition > numberOfEntries) //add to the end of the list
+								{
+									add(newEntry);
+									return;
+								}
+								if(newPosition <= 1) //Add to the beggining of the list
+								{
+									Node nodeTemp = firstNode;
+									newNode.setNextNode(firstNode);
+									firstNode = newNode;
+								}
+								else //Add the node to some place at the beginning or end of the list
+								{
+									Node lastNode = traverse(firstNode, newPosition-1);
+									newNode.setNextNode(lastNode.getNextNode());
+									lastNode.setNextNode(newNode);
+								}
+								numberOfEntries++;
+							}
+
+							/**
+							 * Remove the node at a given posiiton, and return its data
+							 * @param givenPosition : int - The given position to have its node removed
+							 * @return T : data - The data at the given position
+							 */
+							@Override
+							public T remove(int givenPosition) {
+								T data;
+								//Check and set position
+								if(givenPosition >= numberOfEntries) //remove the last entry in the list
+								{
+									givenPosition = numberOfEntries;
+								}
+								if(givenPosition <= 1) //remove the first entry in the list
+								{
+									data = firstNode.getData();
+									traverse(firstNode, numberOfEntries).setNextNode(firstNode.getNextNode()); //set the last nodes next pointer to point to firstNodes next node
+									firstNode = firstNode.getNextNode(); //change the first pointer to point to firstNode's next
+									numberOfEntries--;
+									return data;
+								}
+								//Remove the last or a middle entry in the list
+								Node theNode = traverse(firstNode, givenPosition-1); //Traverse to the node before the node to be removed and returned
+								data = theNode.getNextNode().getData();
+								theNode.setNextNode(theNode.getNextNode().getNextNode());
+								numberOfEntries--;
+								return data;
+							}
+
+							/**
+							 * Cleat the list of all data.
+							 * Set the numberOfEntries variable to 0
+							 */
+							@Override
+							public void clear() {
+								initializeDataFields();
+							}
+
+							/**
+							 * Replace the data at a given position
+							 * @param givenPosition : int - given position
+							 * @param newEntry : T - Data to be changed to in the given positions node
+							 * @return dataHold : T - The data originally in the node
+							 */
+							@Override
+							public T replace(int givenPosition, T newEntry) {
+								T dataHold;
+								//Set the givenPosition if outside the list boundries
+								if(givenPosition > numberOfEntries) //get the node's data
+								{
+									Node original = traverse(firstNode, numberOfEntries); //the node originally in the given position
+									dataHold = original.getData();
+									original.setData(newEntry);
+								}
+								if(givenPosition <= 1) //get first nodes data
+								{
+									 dataHold = firstNode.getData();
+									 firstNode.setData(newEntry);
+								}
+								else //get somewhere in the middle of the lists data
+								{
+									Node original = traverse(firstNode, givenPosition); //the node originally in the given position
+									dataHold = original.getData();
+									original.setData(newEntry);
+								}
+								return dataHold;
+							}
+
+							/**
+							 * Get the data of a node in a given position in the list
+							 * @param givenPosition : int - index in the list
+							 * @return data - data from the node of the given position in the list
+							 */
+							@Override
+							public T getEntry(int givenPosition) {
+								//Set the givenPosition if outside the list boundries
+								if(givenPosition > numberOfEntries) //get the node's data
+								{
+									return traverse(firstNode, numberOfEntries).getData();
+								}
+								if(givenPosition <= 1) //get first nodes data
+								{
+									return firstNode.getData();
+								}
+								else //get somewhere in the middle of the lists data
+								{
+									return traverse(firstNode, givenPosition).getData();
+								}
+							}
+
+							/**
+							 * Get an array of the elements from the list
+							 * @return output : T[] - an array of all the elements in the list
+							 */
+							@Override
+							public T[] toArray() {
+								T[] output = (T[]) new Object[numberOfEntries]; //array to be returned. Will contain the data in each node      
+								
+								int index = 0;
+								Node currentNode = firstNode;
+								output = copy(output, currentNode, index);
+								
+								return output;
+							}
+							
+							/**
+							 * This method recursively copies data from the linked list to an Array
+							 * @param newArray Array which will eventually contain the elements in the list
+							 * @param curr Node pointing to the current spot in the list
+							 * @param index value for where we are in the list
+							 * @return The updated array which now contains all the elements in the list
+							 */
+							private T[] copy(T[] newArray, Node current, int index)
+							{
+								if (index == numberOfEntries)
+								{
+									return newArray;
+								}
+								
+								newArray = copy(newArray, current.getNextNode(), index + 1);
+								newArray[index] = current.getData();
+								return newArray;
+							}
+
+							/**
+							 * Determine whether the list contains certain data
+							 * @param anEntry : Node - data to be found the in the list
+							 * @return found : boolean - whether the list contains certain data or not.
+							 */
+							@Override
+							public boolean contains(T anEntry) {
+								boolean found = false;
+								Node currentNode = firstNode;
+
+								if (find(anEntry, currentNode, 1) != null)
+									found = true;
+								
+								return found;
+							}
+							
+							/**
+							 * Recursively find a given data entry
+							 * @param entry Data to find
+							 * @param curr Current node to look at
+							 * @return the Data we found (or a null if not found)
+							 */
+							private T find(T entry, Node curr, int count)
+							{
+								if (curr == null || count == numberOfEntries+1)
+									return null;
+								
+								if (entry.equals(curr.getData()))
+									return curr.getData();
+								
+								return find(entry,curr.getNextNode(), count+1);
+							}
+
+							/**
+							 * Get the length of the list
+							 * @return numberOfEntries : the length of the list
+							 */
+							@Override
+							public int getLength() {
+								return numberOfEntries;
+							}
+
+							/**
+							 * return whether the list is empty or not
+							 * @return boolean -  the list is empty or not
+							 */
+							@Override
+							public boolean isEmpty() {
+								return numberOfEntries <= 0;
+							}
+
+							/**
+							 * Unused in this class
+							 * Only used in double linked lists
+							 */
+							@Override
+							public void valuesFromEnd() {
+								System.out.println("NOT USED IN THIS TYPE OF LIST");
+							}
+
+							/**
+							 * Use this method to show the linked list is circular
+							 * Non-Recursive since it is only used for testing
+							 */
+							@Override
+							public void valuesInACircle() {
+								System.out.println("Get values in a cirlce. Starting from the first node.");
+								Node curr = firstNode;
+								for(int i = 0; i < numberOfEntries*3; i++)
+								{
+									System.out.println("Current item data:" + curr.data);
+									curr = curr.next;
+								}
+							}
+							
+							/**
+							 * This is the constructor for a Node.
+							 * It contains the node getter and setters for its variables (data and next)
+							 */
+							private class Node
+							{
+
+								private T data; // Entry in list
+								private Node next; // Link to next node
+
+								private Node(T dataPortion)
+								{
+									data = dataPortion;
+									next = firstNode;
+								} // end constructor
+
+								private Node(T dataPortion, Node nextNode)
+								{
+									data = dataPortion;
+									next = nextNode;
+								}
+
+								private T getData()
+								{
+									return data;
+								} 
+
+								private void setData(T newData)
+								{
+									data = newData;
+								}
+
+								private Node getNextNode()
+								{
+									return next;
+								}
+
+								private void setNextNode(Node nextNode)
+								{
+									next = nextNode;
+								}
+							} 
+							
+							/**
+							 * Initializes the class data fields to indicate an empty list.
+							 */
+							private void initializeDataFields()
+							{
+								firstNode = null;
+								numberOfEntries = 0;
+							}
+						}
+						</script>
+					</section>
+					<section id="recursive-linked-lists-circular-double-linked">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">CircularDoubleLinkedList File</h2>
+						<p class="fifteen">This is the class file for a Circular Double Linked List. It creates a circular double linked list with nodes, and manipulates it using Recursion. Each node has a NEXT node, and LAST node pointer. 
+						The first node in the lists last node points to the last node in the list, and the last node in the list points to the first node in the list.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						/**
+						 * This is the class file for a Circular Double Linked List using recursion
+						 * CSC 210L Data Structures Lab
+						 * Lab #5 - Recursive Linked Lists
+						 * Semester 1 | Fall 2018
+						 * October 10, 2018
+						 * @author Joseph Hentges
+						 */
+
+						public class CircularDoubleLinkedList<T> implements ListInterface<T> {
+							
+							private Node firstNode;            // Reference to first node of chain
+							private int numberOfEntries;
+
+							/**
+							 * Traverse the list to a given position.
+							 * @param current : Node - The node the traverse method is currently on
+							 * @param position : int - The position number (index) the traverse is currently on
+							 * @return Node - A node that the traverse method moves to
+							 */
+							public Node traverse(Node current, int position)
+							{        
+								if(position <= 1)
+								{
+									return current;
+								}
+								if(position > numberOfEntries)
+								{
+									position = numberOfEntries;
+								}
+								return traverse(current.getNextNode(), position-1);
+								
+							}
+
+							/**
+							 * Add item to the end of the list
+							 * @param newEntry : T - item to be added
+							 */
+							@Override
+							public void add(T newEntry) {
+								//If the list is not empty
+								//Need to find the end of the list
+								Node newNode = new Node(newEntry);
+								
+								//If the list is empty set the first node pointer to this node
+								if(numberOfEntries == 0)
+								{
+									firstNode = newNode;
+								}
+								else
+								{
+									Node lastNode = traverse(firstNode, numberOfEntries);
+									newNode.setLastNode(lastNode);
+									newNode.setNextNode(firstNode);
+									lastNode.setNextNode(newNode);
+									firstNode.setLastNode(newNode);
+									numberOfEntries++;         
+									return;
+								}
+								numberOfEntries++;
+							}
+
+							/**
+							 * Given a position, add the element to somewhere in the list
+							 * @param newPosition : int - a given position
+							 * @param newEntry : T - Some given data
+							 */
+							@Override
+							public void add(int newPosition, T newEntry) {
+								Node newNode = new Node(newEntry);
+								
+								if(newPosition > numberOfEntries)
+								{
+									add(newEntry);
+									return;
+								}
+								if(newPosition <= 1) //Add to the beggining of the list
+								{
+									Node nodeTemp = firstNode;
+									newNode.setNextNode(firstNode);
+									newNode.setLastNode(firstNode.getLastNode());
+									firstNode.getLastNode().setNextNode(newNode);
+									firstNode = newNode;
+									nodeTemp.setLastNode(firstNode);
+								}
+								else //Add the node to some place at the beginning or end of the list
+								{
+									Node lastNode = traverse(firstNode, newPosition-1);
+									newNode.setLastNode(lastNode);
+									newNode.setNextNode(lastNode.getNextNode());
+									lastNode.setNextNode(newNode);
+									newNode.getNextNode().setLastNode(newNode);
+								}
+								numberOfEntries++;
+							}
+
+							/**
+							 * Remove the node at a given posiiton, and return its data
+							 * @param givenPosition : int - The given position to have its node removed
+							 * @return T : data - The data at the given position
+							 */
+							@Override
+							public T remove(int givenPosition) {
+								T data;
+								//Check and set position entry
+								if(givenPosition > numberOfEntries)
+								{
+									givenPosition = numberOfEntries;
+								}
+								if(givenPosition <= 1)
+								{
+									data = firstNode.getData();
+									firstNode.getNextNode().setLastNode(firstNode.getLastNode());
+									firstNode = firstNode.getNextNode();
+									numberOfEntries--;
+									return data;
+								}
+								Node theNode = traverse(firstNode, givenPosition); //Traverse to the node to be removed and returned
+								theNode.getNextNode().setLastNode(theNode.getLastNode());
+								theNode.getLastNode().setNextNode(theNode.getNextNode());
+								//If the last entry is the one being removed, set its last entry to have a next entry of the first node
+								if(givenPosition >= numberOfEntries)
+								{
+									theNode.getLastNode().setNextNode(firstNode);
+								}
+								data = theNode.getData();
+								numberOfEntries--;
+								return data;
+							}
+
+							/**
+							 * Clear the list of all values
+							 */
+							@Override
+							public void clear() {
+								initializeDataFields();
+							}
+
+							/**
+							 * Replace the data at a given position
+							 * @param givenPosition : int - given position
+							 * @param newEntry : T - Data to be changed to in the given poistions node
+							 * @return dataHold : T - The data originally in the node
+							 */
+							@Override
+							public T replace(int givenPosition, T newEntry) {
+								T dataHold;
+								//Set the givenPosition if outside the list boundries
+								if(givenPosition > numberOfEntries) //get the node's data
+								{
+									Node original = traverse(firstNode, numberOfEntries); //the node originally in the given position
+									dataHold = original.getData();
+									original.setData(newEntry);
+								}
+								if(givenPosition <= 1) //get first nodes data
+								{
+									 dataHold = firstNode.getData();
+									 firstNode.setData(newEntry);
+								}
+								else //get somewhere in the middle of the lists data
+								{
+									Node original = traverse(firstNode, givenPosition); //the node originally in the given position
+									dataHold = original.getData();
+									original.setData(newEntry);
+								}
+								return dataHold;
+							}
+
+							/**
+							 * Get the data of a node in a given position in the list
+							 * @param givenPosition : int - index in the list
+							 * @return data - data from the node of the given position in the list
+							 */
+							@Override
+							public T getEntry(int givenPosition) {
+								//Set the givenPosition if outside the list boundries
+								if(givenPosition > numberOfEntries) //get the node's data
+								{
+									return traverse(firstNode, numberOfEntries).getData();
+								}
+								if(givenPosition <= 1) //get first nodes data
+								{
+									return firstNode.getData();
+								}
+								else //get somewhere in the middle of the lists data
+								{
+									return traverse(firstNode, givenPosition).getData();
+								}
+							}
+
+							/**
+							 * Get an array of the elements from the list
+							 * @return output : T[] - an array of all the elements in the list
+							 */
+							@Override
+							public T[] toArray() {
+								T[] output = (T[]) new Object[numberOfEntries]; //array to be returned. Will contain the data in each node      
+								
+								int index = 0;
+								Node currentNode = firstNode;
+								output = copy(output, currentNode, index);
+								
+								return output;
+							}
+							
+							/**
+							 * This method recursively copies data from the linked list to an Array
+							 * @param newArray Array which will eventually contain the elements in the list
+							 * @param curr Node pointing to the current spot in the list
+							 * @param index value for where we are in the list
+							 * @return The updated array which now contains all the elements in the list
+							 */
+							private T[] copy(T[] newArray, Node current, int index)
+							{
+								if (index == numberOfEntries)
+								{
+									return newArray;
+								}
+								
+								newArray = copy(newArray, current.getNextNode(), index + 1);
+								newArray[index] = current.getData();
+								return newArray;
+							}
+
+							/**
+							 * Determine whether the list contains certain data
+							 * @param anEntry : Node - data to be found the in the list
+							 * @return found : boolean - whether the list contains certain data or not.
+							 */
+							@Override
+							public boolean contains(T anEntry) {
+								boolean found = false;
+								Node currentNode = firstNode;
+
+								if (find(anEntry, currentNode, 1) != null)
+									found = true;
+								
+								return found;
+							}
+							
+							/**
+							 * Recursively find a given data entry
+							 * @param entry Data to find
+							 * @param curr Current node to look at
+							 * @return the Data we found (or a null if not found)
+							 */
+							private T find(T entry, Node curr, int count)
+							{
+								if (curr == null || count == numberOfEntries+1)
+									return null;
+								
+								if (entry.equals(curr.getData()))
+									return curr.getData();
+								
+								return find(entry,curr.getNextNode(), count+1);
+							}
+
+							/**
+							 * Get the length of the list
+							 * @return numberOfEntries - The number of elements in the list
+							 */
+							@Override
+							public int getLength() {
+								return numberOfEntries;
+							}
+
+							/**
+							 * Return whether the list is empty or not
+							 * @return boolean - whether the list is empty
+							 */
+							@Override
+							public boolean isEmpty() {
+								return numberOfEntries <= 0;
+							}
+
+							/**
+							 * Go to the last node/element in the list, and read there data backwards.
+							 * This shows the list is double linked.
+							 * Non-Recursive since it is only used for testing
+							 */
+							@Override
+							public void valuesFromEnd()
+							{
+								System.out.println("The number of elements: " + numberOfEntries);
+								Node curr = firstNode;
+								for(int i = 0; i < numberOfEntries-1; i++)
+								{
+									curr = curr.getNextNode();
+								}
+								System.out.println("The list is currently on the last item. Item data: " + curr.getData());
+								System.out.println("Going backwards in the list now...");
+								for(int i = 0; i < numberOfEntries; i++)
+								{
+									System.out.println("Current item data: " + curr.getData());
+									curr = curr.getLastNode();
+								}
+							}
+
+							/**
+							 * Use this method to show the linked list is circular
+							 * Non-Recursive since it is only used for testing
+							 */
+							@Override
+							public void valuesInACircle() {
+								System.out.println("Get values in a cirlce. Starting from the first node.");
+								Node curr = firstNode;
+								for(int i = 0; i < numberOfEntries*3; i++)
+								{
+									System.out.println("Current item data:" + curr.data);
+									curr = curr.next;
+								}
+							}
+							
+							
+							/**
+							 * This is the constructor for a Node.
+							 * It contains the node getter and setters for its variables (data, next and last)
+							 */
+							private class Node
+							{
+
+								private T data; // Entry in list
+								private Node next; // Link to next node
+								private Node last;
+
+								private Node(T dataPortion)
+								{
+									data = dataPortion;
+									next = firstNode;
+									last = firstNode;
+								} // end constructor
+
+								private Node(T dataPortion, Node nextNode, Node lastNode)
+								{
+									data = dataPortion;
+									next = nextNode;
+									last = lastNode;
+								}
+
+								private T getData()
+								{
+									return data;
+								} 
+
+								private void setData(T newData)
+								{
+									data = newData;
+								}
+
+								private Node getNextNode()
+								{
+									return next;
+								}
+
+								private void setNextNode(Node nextNode)
+								{
+									next = nextNode;
+								}
+								
+								private Node getLastNode()
+								{
+									return last;
+								}
+								
+								private void setLastNode(Node lastNode)
+								{
+									last = lastNode;
+								}
+							} 
+							
+							/**
+							 * Initializes the class data fields to indicate an empty list.
+							 */
+							private void initializeDataFields()
+							{
+								firstNode = null;
+								numberOfEntries = 0;
+							}
+						}
+						</script>
+					</section>
+		        </section>
+
+
+		        
+		        <section id="end">
+					<div class="content-header">
+		                <a class="" href="projects-1"><i class="fa fa-arrow-left"></i></a>
+						<u><a class="not-page" href="projects-1">1</a></u>
+						<u><a class="not-page" href="projects-2">2</a></u>
+						<u><a class="" href="#">3</a></u>
+						<a class="dead-arrow" href="#"><i class="fa fa-arrow-right"></i></a>
+                    </div>
+		        </section>
+		    </div>
+		</div>
+		
+		
+		<!-- Essential JavaScript Libraries
+		==============================================-->
+        <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.nav.js"></script>
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shCore.js"></script> 
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shBrushXml.js"></script> 
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shBrushCss.js"></script> 
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shBrushJScript.js"></script> 
+        <script type="text/javascript" src="../syntax-highlighter/scripts/shBrushPhp.js"></script> 
+        <script type="text/javascript">
+            SyntaxHighlighter.all()
+        </script>
+        <script type="text/javascript" src="../js/custom.js"></script>
+		
+    </body>
+</html>
