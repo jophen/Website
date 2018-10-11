@@ -19,7 +19,7 @@ public class HeapSortAlgorithm {
         int size = 100;
         int[] randomArray = createRandomIntArray(size); //create a new array and fill it with random integer values
         System.out.println(arrayToString(randomArray));
-        HEAP_SORT(randomArray, randomArray.length); //complete insetion sort and add the number of operations completed to the overall number
+        HEAP_SORT(randomArray, randomArray.length);
         System.out.println(arrayToString(randomArray));
     }
     
