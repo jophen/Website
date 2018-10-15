@@ -43,6 +43,12 @@
 					<li><a class="indent" href="#recursive-linked-lists-double-linked">Recursive Double Linked List</a></li>
 					<li><a class="indent" href="#recursive-linked-lists-circular-linked">Recursive Circular Linked List</a></li>
 					<li><a class="indent" href="#recursive-linked-lists-circular-double-linked">Recursive Circular Double Linked List</a></li>
+					<li><a href="#self-built-stacks">Self Created Stack</a></li>
+					<li><a class="indent" href="#self-built-stacks-array">Stack Using an Array</a></li>
+					<li><a class="indent" href="#self-built-stacks-linked-list">Stack Using a Linked List</a></li>
+					<li><a href="#self-built-queue">Self Created Queue</a></li>
+					<li><a class="indent" href="#self-built-queue-array">Queue Using an Array</a></li>
+					<li><a class="indent" href="#self-built-queue-linked-list">Queue Using a Linked List</a></li>
                 </ul>
             </nav>
         </aside>
@@ -1308,6 +1314,672 @@
 								firstNode = null;
 								numberOfEntries = 0;
 							}
+						}
+						</script>
+					</section>
+		        </section>
+				
+				<section id="self-built-stacks">
+					<div class="content-header">
+		                <h1>Stacks | Arrays and Linked Lists</h1>
+						</br>
+						<h3>Programming Language : Java</h3>
+                    </div>
+					<div class="welcome">                      
+                        <h2 class="twenty">Create a Stack Using Arrays and Linked Lists</h2>
+						<p>This program shows the use of arrays and linked lists to create a stack.</p>
+                        <p>The stack allows for data to be added (push), peeked, removed (pop), and a few other functions.</p>
+		            </div>
+					<div class="welcome">       
+                        <h2 class="twenty">Files Used / Created</h2>
+                        <p>Download them below. Bold represents class files, unbold: interface files.</p>
+		            </div>
+					<div class="script-source">
+		                <ul>
+							<b><li><a href="project-files/page3/self-built-stacks/ArrayStack.java" download>ArrayStack.java</a></li></b>
+							<b><li><a href="project-files/page3/self-built-stacks/LinkedStack.java" download>LinkedStack.java</a></li></b>
+		                    <li><a href="project-files/page3/self-built-stacks/MyStack.java" download>myStack.java</a></li>
+		                </ul>
+		            </div>					
+					<p class="addSpace">&nbsp;</p>
+					<h2 class="title">myStack Interface</h2>
+					<p class="fifteen">This is the interface file for the stacks created using arrays and linked lists. Methods needed for a stack are declared here.</p>
+					<script type="syntaxhighlighter" class="brush: js">
+					/**
+					 * This is the interface file for a Stack.
+					 * CSC 210 Data Structures
+					 * Stacks
+					 * Semester 1 | Fall 2018
+					 * October 12, 2018
+					 * @author Joseph Hentges
+					 */
+
+					public interface MyStack<T>
+					{
+						/**
+						 * Pushes data onto the top of the Stack
+						 * @param entry Data to push onto the Stack
+						 */
+						void push(T entry);
+
+						/**
+						 * Pop data off the top of the Stack.
+						 * @return Data which was on the top of the Stack. May be null if Stack is empty
+						 */
+						T pop();
+						
+						/**
+						 * Peek at what data is on top of the Stack
+						 * @return Data (does not remove) which is currently on top of the Stack.  May be null if Stack is empty
+						 */
+						T peek();
+						
+						/**
+						 * Retrieves the size of the Stack
+						 * @return An integer denoting how many items are currently in the Stack
+						 */
+						int size();
+						
+						/**
+						 * Determines if the Stack is empty or not
+						 * @return Boolean indicating if the Stack is empty (true) or not (false)
+						 */
+						boolean isEmpty();
+					}
+					</script>
+					<section id="self-built-stacks-array">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">Stack Using Arrays</h2>
+						<p class="fifteen">This is the class file for a stack using arrays.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						/**
+						 * This is the class file for a Stack using arrays. 
+						 * This stack is NOT RESIZABLE
+						 * CSC 210L Data Structures Lab
+						 * Stacks
+						 * Semester 1 | Fall 2018
+						 * October 12, 2018
+						 * @author Joseph Hentges
+						 */
+						public class ArrayStack<T>  implements MyStack<T>
+						{
+
+							private T[] stack;
+							private int count;
+							
+							/**
+							 * the constructor for this file
+							 * @param size 
+							 */
+							public ArrayStack(int size)
+							{
+								count = 0;
+								stack = (T[]) new Object[size];
+							}
+							
+							/**
+							 * This is a toString method to get (for display) the values in the stack
+							 * @return output : String - the string of the values
+							 */
+							public String toString()
+							{
+								String output = "PRINTING STACK\n";
+								for (int i = count - 1; i >= 0; i--)
+								{
+									output += "\t" + stack[i] + "\n";
+								}
+								output += "There are " + size() + " items.\n";
+								return output;
+							}
+							
+							/**
+							 * Add (push on) some data to the stack
+							 * @param entry : T - some data (type not specified)
+							 */
+							@Override
+							public void push(T entry) {
+								if (count == stack.length) //Check if full!
+								{
+									System.err.println("Stack full, did not push!");
+									return;
+								}
+								
+								stack[count] = entry;
+								count++;
+								
+							}
+
+							/**
+							 * Remove (pop off) the first value in the stack
+							 * @return temp : T - the data that was removed (type not specified)
+							 */
+							@Override
+							public T pop() {
+								if (isEmpty())
+								{
+									return null;
+								}
+								count--;
+								T temp = stack[count];
+								stack[count] = null;
+								return temp;
+							}
+
+							/**
+							 * Look (peek) at the first value in the stack
+							 * @return temp : T - the first data in the stack
+							 */
+							@Override
+							public T peek() {
+								if (isEmpty())
+								{
+									return null;
+								}
+								return stack[count - 1];
+							}
+
+							/**
+							 * Get the size of the stack
+							 * @return count : int - the size of the stack
+							 */
+							@Override
+							public int size() {
+								return count;
+							}
+
+							/**
+							 * return whether the stack is empty or not
+							 * @return bool : boolean - the stack is empty or not
+							 */
+							@Override
+							public boolean isEmpty() {
+								if (count == 0)
+									return true;
+								return false;
+							}
+							
+						}
+						</script>
+					</section>
+					<section id="self-built-stacks-linked-list">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">Stack Using Linked Lists</h2>
+						<p class="fifteen">This is the class file for a stack using linked lists.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						/**
+						 * This is the class file for a Stack using Linked Lists.
+						 * This stack IS RESIZABLE
+						 * CSC 210 Data Structures
+						 * Stacks
+						 * Semester 1 | Fall 2018
+						 * October 12, 2018
+						 * @author Joseph Hentges
+						 */
+
+						public class LinkedStack<T> implements MyStack<T> {
+							
+							private int count;
+							private Node top;
+							
+							/**
+							 * This is the class for a Node, for the linked list
+							 */
+							private class Node
+							{
+								T data;
+								Node next;
+							}
+							
+							/**
+							 * This is the constructor for the LinkedStack
+							 */
+							public LinkedStack()
+							{
+								count = 0;
+								top = null;
+							}
+
+							/**
+							 * This is a toString method to get (for display) the values in the stack
+							 * @return output : String - the string of the values
+							 */
+							public String toString()
+							{
+								String output = "PRINTING STACK\n";
+								Node curr = top;
+								while (curr != null)
+								{
+									output += "\t" + curr.data + "\n";
+									curr = curr.next;
+								}
+								output += "Current size is: " + size() + "\n";
+								return output;
+							}
+							
+							/**
+							 * Add (push on) some entry to the stack
+							 * @param entry : T - Some data (type not specified)
+							 */
+							@Override
+							public void push(T entry) {
+								Node newNode = new Node();
+								newNode.data = entry;
+								newNode.next = top;
+								top = newNode;
+								count++;
+							}
+
+							/**
+							 * Remove (pop off) some entry from the queue
+							 * @return temp : T - Some data (type not specified)
+							 */
+							@Override
+							public T pop() {
+								if (isEmpty())
+									return null;
+								T temp = top.data;
+								top.data = null;
+								top = top.next;
+								count--;
+								return temp;
+							}
+
+							/**
+							 * Peek, not remove, the first value in the stack
+							 * @return T - some data (type not specified)
+							 */
+							@Override
+							public T peek() {
+								if (isEmpty())
+									return null;
+								return top.data;
+							}
+
+							/**
+							 * Get the size of the stack
+							 * @return count : int - the size of the stack
+							 */
+							@Override
+							public int size() {
+								return count;
+							}
+
+							/**
+							 * return whether the stack is empty or not
+							 * @return bool : boolean - the stack empty or not.
+							 */
+							@Override
+							public boolean isEmpty() {
+								if (count == 0)
+									return true;
+								return false;
+							}
+							
+						}
+						</script>
+					</section>
+		        </section>
+				
+				<section id="self-built-queue">
+					<div class="content-header">
+		                <h1>Queues | Arrays and Linked Lists</h1>
+						</br>
+						<h3>Programming Language : Java</h3>
+                    </div>
+					<div class="welcome">                      
+                        <h2 class="twenty">Create a Queue Using Arrays and Linked Lists</h2>
+						<p>This program shows the use of arrays and linked lists to create a queue.</p>
+                        <p>The queue allows for data to be added (enqueue), peeked, removed (dequeue), and a few other functions.</p>
+		            </div>
+					<div class="welcome">       
+                        <h2 class="twenty">Files Used / Created</h2>
+                        <p>Download them below. Bold represents class files, unbold: interface files.</p>
+		            </div>
+					<div class="script-source">
+		                <ul>
+							<b><li><a href="project-files/page3/self-built-queue/ArrayQueue.java" download>ArrayQueue.java</a></li></b>
+							<b><li><a href="project-files/page3/self-built-queue/LinkedQueue.java" download>LinkedQueue.java</a></li></b>
+		                    <li><a href="project-files/page3/self-built-queue/MyQueue.java" download>myQueue.java</a></li>
+		                </ul>
+		            </div>					
+					<p class="addSpace">&nbsp;</p>
+					<h2 class="title">myQueue Interface</h2>
+					<p class="fifteen">This is the interface file for the queues created using arrays and linked lists. Methods needed for a queue are declared here.</p>
+					<script type="syntaxhighlighter" class="brush: js">
+					/**
+					 * This is the interface file for a Queue.
+					 * CSC 210 Data Structures
+					 * Queues
+					 * Semester 1 | Fall 2018
+					 * October 12, 2018
+					 * @author Joseph Hentges
+					 */
+
+					public interface MyQueue<T>
+					{
+						/**
+						 * Enqueues data at the back of the Queue
+						 * @param entry Data to enqueue into the Queue
+						 */
+						void enqueue(T entry);
+
+						/**
+						 * Dequeue data off the front of the Queue
+						 * @return Data which was at the front of the Queue. May be null if Queue is empty
+						 */
+						T dequeue();
+						
+						/**
+						 * Peek at what data is at the front of the Queue
+						 * @return Data (does not remove) which is currently at the front of the Queue.  May be null if Queue is empty
+						 */
+						T peek();
+						
+						/**
+						 * Retrieves the size of the Queue
+						 * @return An integer denoting how many items are currently in the Queue
+						 */
+						int size();
+						
+						/**
+						 * Determines if the Queue is empty or not
+						 * @return Boolean indicating if the Queue is empty (true) or not (false)
+						 */
+						boolean isEmpty();
+					}
+					</script>
+					<section id="self-built-queue-array">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">Queue Using Arrays</h2>
+						<p class="fifteen">This is the class file for a queue using arrays.</p>
+						<script type="syntaxhighlighter" class="brush: js">				
+						/**
+						 * This is the class file for a Queue using Arrays. 
+						 * This Queue is NOT RESIZABLE
+						 * CSC 210 Data Structures
+						 * Queues
+						 * Semester 1 | Fall 2018
+						 * October 12, 2018
+						 * @author Joseph Hentges
+						 */
+
+						public class ArrayQueue<T> implements MyQueue<T> {
+							private int count;
+							private int front;
+							private int back;
+							private T[] queue;
+							
+							/**
+							 * This is the constructor
+							 * @param size : int - the size of the array
+							 */
+							public ArrayQueue(int size)
+							{
+								count = 0;
+								queue = (T[]) new Object[size];
+								front = 0;
+								back = 0;
+							}
+							
+							/**
+							 * This is a toString method to get (for display) the values in the queue
+							 * @return output : String - the string of the values
+							 */
+							public String toString()
+							{
+								String output = "PRINTING QUEUE\n";
+								//if the queue is empty, don't do anything
+								if(isEmpty())
+								{
+									//DO NOTHING
+								}
+								// the queue is not wrapping
+								else if(front <= back)
+								{
+									for(int i = front; i <= back; i++)
+									{
+										output += "\t" + queue[i] + "\t";
+									}
+								}
+								// the queue is wrapping
+								else
+								{
+									// go from front to end of array
+									for(int i = front; i < queue.length; i++)
+									{
+										output += "\t" + queue[i] + "\t";
+									}
+									// pick the front (0 to back)
+									for(int i = 0; i <= back; i++)
+									{
+										output += "\t" + queue[i] + "\t";
+									}
+								}
+								output += "\nThere are " + size() + " items.\n";
+								return output;
+							}
+
+							/**
+							 * Add an entry to the queue
+							 * @param entry : T - Some data (data type - any)
+							 */
+							@Override
+							public void enqueue(T entry) {
+								//if the queue is full, let the user know, and don't insert any values.
+								if (count == queue.length)
+								{
+									System.err.println("Queue is FULL!!!");
+									return;
+								}
+								//if the queue is empty, place the value in the first index of the array (0)
+								if (isEmpty())
+								{
+									front = 0;
+									back = 0;
+									queue[front] = entry;
+									count++;
+									return;
+								}
+								//if back is less than the length of the queue (meaning the array filling from left to right, and not full). Place the value at index back
+								if(back < queue.length - 1)
+								{
+									back++;
+									queue[back] = entry;
+									count++;
+									return;
+								}
+								//at the end of the array, but not FULL, do a wrap around. Meaning we place the values at the front rather than the back
+								back = 0;
+								queue[back] = entry;
+								count++;
+								
+							}
+
+							/**
+							 * Remove an entry from the queue and return the data
+							 * @return temp : T - some data that was removed from the queue
+							 */
+							@Override
+							public T dequeue() {
+								//if the queue is empty, return nothing
+								if(isEmpty())
+								{
+									return null;
+								}
+								T temp = queue[front];
+								queue[front] = null;
+								count--;
+								front++;
+								//If the front index is now out of bounds (front larger than the size of the array, set it back to 0
+								if(front == queue.length)
+								{
+									front = 0;
+								}
+								return temp;
+							}
+
+							/**
+							 * Look (peek) at the next value in the queue
+							 * @return T - some data, the front of the queue
+							 */
+							@Override
+							public T peek() {
+								return queue[front];
+							}
+
+							/**
+							 * Get the size of the queue
+							 * @return count : int  - the size of the queue
+							 */
+							@Override
+							public int size() {
+								return count;
+							}
+
+							/**
+							 * Return whether the queue is empty or not
+							 * @return bool : boolean - the queue is empty or not
+							 */
+							@Override
+							public boolean isEmpty() {
+								return count == 0;
+							}
+							
+						}
+						</script>
+					</section>
+					<section id="self-built-queue-linked-list">
+						<p class="addSpace">&nbsp;</p>
+						<h2 class="title">Queue Using Linked Lists</h2>
+						<p class="fifteen">This is the class file for a Queue using linked lists.</p>
+						<script type="syntaxhighlighter" class="brush: js">
+						/**
+						 * This is the class file for a Queue using Linked Lists. 
+						 * This Queue is RESIZABLE
+						 * CSC 210 Data Structures
+						 * Queues
+						 * Semester 1 | Fall 2018
+						 * October 12, 2018
+						 * @author Joseph Hentges
+						 */
+
+						public class LinkedQueue<T> implements MyQueue<T> {
+
+							private int count;
+							private Node front;
+							private Node back;
+							
+							//class for a Node
+							private class Node
+							{
+								T data;
+								Node next = null;
+							}
+							
+							/**
+							 * Constructor for a Linked Queue
+							 */
+							public LinkedQueue()
+							{
+								count = 0;
+								front = null;
+								back = null;
+							}
+							
+							/**
+							 * This is a toString method to get (for display) the values in the queue
+							 * @return output : String - the string of the values
+							 */
+							public String toString()
+							{
+								String output = "PRINTING QUEUE\n";
+								Node curr = front;
+								while (curr != null)
+								{
+									output += "\t" + curr.data + "\t";
+									curr = curr.next;
+								}
+								output += "\nCurrent size is: " + size() + "\n";
+								return output;
+							}
+							
+							/**
+							 * Add an entry to the queue
+							 * @param entry : T - Some data (data type - any)
+							 */
+							@Override
+							public void enqueue(T entry) {
+								Node newNode = new Node();
+								newNode.data = entry;
+								//if the queue is empty, place the node at the front of the queue
+								if(isEmpty())
+								{
+									front = newNode;
+								}
+								//if the queue is not empty, place the node at the end of the queue
+								else
+								{
+									back.next = newNode;
+								}
+								back = newNode; //point back to the new node
+								count++;
+							}
+
+							/**
+							 * Remove an entry from the queue and return the data
+							 * @return temp : T - some data that was removed from the queue
+							 */
+							@Override
+							public T dequeue() {
+								//if the queue is empty, return nothing
+								if(isEmpty())
+								{
+									return null;
+								}
+								//if the queue is not empty, get the front data and move its pointer
+								T temp = front.data;
+								front.data = null;
+								front = front.next;
+								count--;
+								//if we are empty after a removal, back will still be pointing to the node, so set that to null, to account for it
+								if(isEmpty())
+								{
+									back = null;
+								}
+								return temp;
+							}
+
+							/**
+							 * Get the front data in the queue
+							 * @return T : the data (type not specified)
+							 */
+							@Override
+							public T peek() {
+								if(isEmpty())
+								{
+									return null;
+								}
+								return front.data;
+							}
+
+							/**
+							 * Get the size of the queue
+							 * @return count : int  - the size of the queue
+							 */
+							@Override
+							public int size() {
+								return count;
+							}
+
+							/**
+							 * return whether the queue is empty or not
+							 * @return bool : boolean - whether the queue is empty
+							 */
+							@Override
+							public boolean isEmpty() {
+								return count == 0;
+							}
+							
 						}
 						</script>
 					</section>
