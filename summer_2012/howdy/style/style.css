@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,img {margin:0;padding:0; -webkit-text-size-adjust:none;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:0;}
+address,caption,cite,code,dfn,th,var {font-style:normal;font-weight:normal;}
+ul {list-style:none;}
+ol{ list-style:outside decimal; margin-left:18px; line-height:1.6em;}
+ol li{ line-height:1.8em;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;}
+a{ text-decoration:none;color:#00b8e1;}
+a:hover{text-decoration:underline;}
+img{ vertical-align:middle;}
+
+/*basic*/
+.fl {float:left !important;}
+.fr {float:right !important;}
+.clear{ clear:both; height:0; overflow:hidden;}   
+.noBor{ background:none !important; border:none !important; margin-right:0 !important;} 
+.oh{ overflow:hidden !important;}
+.mt10{ margin-top:10px !important;}
+.maxW{ max-width:100%;}
+body{font:14px/1.7em Arial, Helvetica, sans-serif; color:#666;background:url(images/bg_02.png) repeat-x #fffdf9; } 
+.wrap{max-width:750px; min-width:320px; margin:0 auto; padding:0 10px; overflow:hidden;}
+h1{ font-size:50px; line-height:55px; padding:60px 0 25px;}
+.break{ background:url(images/break.png) no-repeat 50% 50%; min-height:3px; }
+.break p{ color:#999895; width:170px; margin:0 auto; background:#fffdf9; text-align:center;}
+.otherUser{ margin:10px auto; padding:20px;overflow:hidden; background:#fff; border:1px solid #ddd;}
+.otherUser li{ display:inline-block;  font-size:16px; margin-right:10px; font-weight:bold;}
+.date{ color:#999895; font-size:16px; margin:20px 0; text-align:center;}
+@media (max-width: 479px) {
+	.info li{ float:none; width:auto;}
+}
+.other,.me{float:left;  margin-bottom:25px; max-width:450px;}
+.other .tit{ font-size:16px;  margin-left:20px; margin-bottom:15px;}  
+.other .user,.me .user{ width:91px; float:left; position:relative; font-size:11px;text-align:center;text-overflow:ellipsis; overflow:hidden; white-space:nowrap;} 
+.me .user{ float:right;}
+
+.other .message{ position:relative;background:url(images/other-bg.png) repeat-x #f7f7f7; border:1px solid #e0e8ee; border-width:0 1px 1px; padding:15px;  margin-left:100px;  word-break:break-all; }
+.other .message .tl,.other .message .tr,.other .message .bl,.other .message .br,.other .message .dot{ background:url(images/other-corner.png) no-repeat; width:7px; height:6px; position:absolute; z-index:1;}
+.other .message .tl{ top:0; left:-1px;}
+.other .message .tr{ background-position:-7px 0; width:7px; height:6px; top:0; right:-1px;}
+.other .message .br{ background-position:-10px -7px; width:5px; height:6px; bottom:-1px; right:-1px;}
+.other .message .bl{ background-position:-9px -14px; width:5px; height:6px; bottom:-1px; left:-2px;}
+.other .message .dot{ background-position:0 -7px; width:9px; height:15px; top:20px; left:-9px;}
+.message .info{  position:absolute; z-index:2; top:-15px; }
+.other .message .info{right:-10px;}
+.me .message .info{left:-10px;}
+.message p img{ max-width:162px; display:block\9; margin:0 auto\9; *display:inline; *margin:0;} 
+
+.me{ float:right;}
+.me .message{position:relative;background:url(images/me-bg.png) repeat-x #e1f7ff; border:1px solid #deeef4; border-width:0 1px 1px; padding:15px; margin-right:100px; word-break:break-all; }
+.me .message .tl,.me .message .tr,.me .message .bl,.me .message .br,.me .message .dot{ background:url(images/me-corner.png) no-repeat; width:7px; height:6px; position:absolute; z-index:1;}
+.me .message .tl{ top:0; left:-1px;}
+.me .message .tr{ background-position:-7px 0; width:7px; height:6px; top:0; right:-1px;}
+.me .message .bl{ background-position:-10px -7px; width:5px; height:6px; bottom:-1px; left:-1px;}
+.me .message .br{ background-position:-10px -14px; width:5px; height:6px; bottom:-1px; right:-1px;}
+.me .message .dot{ background-position:0 -7px; width:9px; height:15px; top:20px; right:-9px;}
+ 
